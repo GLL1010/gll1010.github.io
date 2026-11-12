@@ -303,7 +303,6 @@ def market_page(slug, place, seo):
           <p><strong>Or call us: <a href="tel:+14027707950">(402) 770-7950</a></strong></p>
         </div>
         <div class="card">
-          <h3 style="margin-bottom:16px;">Get an Instant Quote</h3>
           {SURVEY_EMBED}
         </div>
       </div>
