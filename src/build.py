@@ -4,7 +4,7 @@
 Run:  python3 src/build.py
 Edit page content here or in src/*.html, then rebuild and commit docs/.
 """
-import json, os, shutil, html as H
+import json, os, re, shutil, html as H
 
 SRC = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(os.path.dirname(SRC), "docs")
@@ -15,6 +15,7 @@ POF_URL = "https://portal.goodlife-lending.com/goodlifelending/proof-of-funds"
 PORTAL_URL = "https://portal.goodlife-lending.com"
 PHONE = "402-770-7950"
 EMAIL = "josh@goodlife-lending.com"
+LASTMOD = "2026-11-12"  # bump when content changes
 
 # ---------------------------------------------------------------------------
 # Tracking: copied verbatim from GHL > GLL Basic Site > Settings > Tracking code
@@ -95,7 +96,7 @@ LOAN_FORM_EMBED = """<iframe
 # ---------------------------------------------------------------------------
 NAV = f"""  <nav aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="/" class="nav-logo" aria-label="Good Life Lending Home">
+      <a href="/" class="nav-logo">
         <span style="color:var(--navy);font-weight:800;">Good</span><span style="color:var(--navy);font-weight:800;">life</span>&nbsp;<span style="color:var(--orange);font-size:13px;letter-spacing:2px;font-weight:600;">LENDING</span>
       </a>
       <ul class="nav-links" role="list">
@@ -118,9 +119,9 @@ FOOTER = f"""  <footer role="contentinfo">
             Helping real estate entrepreneurs experience opportunity through fast, character-based private financing.
           </p>
           <div class="footer-social" aria-label="Social media links">
-            <a href="https://www.instagram.com/good_life_lending" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
-            <a href="https://www.facebook.com/goodlifelending" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
-            <a href="https://www.linkedin.com/company/goodlifelending" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+            <a href="https://www.instagram.com/good_life_lending" target="_blank" rel="noopener noreferrer" title="Instagram"><span aria-hidden="true">IG</span><span class="sr-only">Instagram</span></a>
+            <a href="https://www.facebook.com/goodlifelending" target="_blank" rel="noopener noreferrer" title="Facebook"><span aria-hidden="true">f</span><span class="sr-only">Facebook</span></a>
+            <a href="https://www.linkedin.com/company/goodlifelending" target="_blank" rel="noopener noreferrer" title="LinkedIn"><span aria-hidden="true">in</span><span class="sr-only">LinkedIn</span></a>
           </div>
           <p class="footer-contact">
             <a href="tel:+14027707950">{PHONE}</a><br />
@@ -129,7 +130,7 @@ FOOTER = f"""  <footer role="contentinfo">
           </p>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
+          <p class="footer-heading">Company</p>
           <ul>
             <li><a href="/#about">Our Story</a></li>
             <li><a href="/#values">Our Values</a></li>
@@ -138,7 +139,7 @@ FOOTER = f"""  <footer role="contentinfo">
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Borrowers</h4>
+          <p class="footer-heading">Borrowers</p>
           <ul>
             <li><a href="{APPLY_URL}">Apply Now</a></li>
             <li><a href="/#contact">Get an Instant Quote</a></li>
@@ -148,7 +149,7 @@ FOOTER = f"""  <footer role="contentinfo">
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Service Areas</h4>
+          <p class="footer-heading">Service Areas</p>
           <ul>
             <li><a href="/hard-money-lenders-nebraska">Nebraska</a></li>
             <li><a href="/omaha-hard-money-lenders">Omaha</a></li>
@@ -169,14 +170,31 @@ FOOTER = f"""  <footer role="contentinfo">
 
 
 def page(path, title, description, body, *, canonical=None, extra_head="", ld=None,
-         embeds=False, noindex=False):
+         embeds=False, noindex=False, og_title=None, og_description=None):
     canonical = canonical if canonical is not None else f"{DOMAIN}/{path}".rstrip("/")
     if path == "":
         canonical = f"{DOMAIN}/"
     ld_block = ""
-    if ld is not None:
-        ld_txt = ld if isinstance(ld, str) else json.dumps(ld, indent=2, ensure_ascii=False)
-        ld_block = f'  <script type="application/ld+json">\n{ld_txt}\n  </script>\n'
+    for item in (ld if isinstance(ld, list) else [ld] if ld is not None else []):
+        ld_txt = item if isinstance(item, str) else json.dumps(item, indent=2, ensure_ascii=False)
+        ld_block += f'  <script type="application/ld+json">\n{ld_txt}\n  </script>\n'
+    og = ""
+    if not noindex:
+        ot = H.escape(og_title or title); od = H.escape(og_description or description)
+        og = f"""  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Good Life Lending" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="{canonical}" />
+  <meta property="og:title" content="{ot}" />
+  <meta property="og:description" content="{od}" />
+  <meta property="og:image" content="{DOMAIN}/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{ot}" />
+  <meta name="twitter:description" content="{od}" />
+  <meta name="twitter:image" content="{DOMAIN}/assets/img/og-image.jpg" />
+"""
     robots = '  <meta name="robots" content="noindex" />\n' if noindex else ""
     desc = f'  <meta name="description" content="{H.escape(description)}" />\n' if description else ""
     return f"""<!DOCTYPE html>
@@ -188,7 +206,7 @@ def page(path, title, description, body, *, canonical=None, extra_head="", ld=No
 {desc}{robots}  <link rel="canonical" href="{canonical}" />
   <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
-{extra_head}{ld_block}
+{og}{extra_head}{ld_block}
 {HEAD_TRACKING}
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -246,23 +264,25 @@ def build_home():
     body = read("home.html")
     body = (body.replace("{{APPLY_URL}}", APPLY_URL)
                 .replace("{{POF_URL}}", POF_URL)
-                .replace("{{SURVEY_EMBED}}", SURVEY_EMBED))
-    og = f"""  <meta name="keywords" content="hard money lender, hard money loans, fix and flip loans, private money lending, real estate investment loans, bridge loans for investors, fix and flip financing, private lender real estate" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{DOMAIN}/" />
-  <meta property="og:title" content="Good Life Lending | Hard Money Loans That Close in 7–10 Days" />
-  <meta property="og:description" content="Fast, character-based hard money lending for real estate investors. We've been on the borrower side. We know what it takes — and what it feels like when the bank says no." />
-  <meta property="og:image" content="{DOMAIN}/assets/img/logo.png" />
-  <meta property="og:site_name" content="Good Life Lending" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Good Life Lending | Hard Money Loans That Close in 7–10 Days" />
-  <meta name="twitter:description" content="Fast, character-based hard money lending for real estate investors. Fund your next flip without waiting 30+ days." />
-  <meta name="twitter:image" content="{DOMAIN}/assets/img/logo.png" />
-"""
+                .replace("{{SURVEY_EMBED}}", SURVEY_EMBED.replace("<iframe ", '<iframe loading="lazy" ', 1)))
+    schema = json.loads(read("home-schema.json"))
+    faqs = re.findall(r'<div class="faq-item">\s*<h3>(.*?)</h3>\s*<p>(.*?)</p>', body, re.S)
+    for node in schema["@graph"]:
+        if node["@type"] == "FinancialService":
+            node["image"] = f"{DOMAIN}/assets/img/og-image.jpg"
+            node["areaServed"] = [{"@type": "State", "name": "Nebraska"}] + [
+                {"@type": "City", "name": f"{c}, NE"} for c in
+                ["Omaha", "Lincoln", "Bellevue", "Grand Island", "Kearney", "Fremont", "Hastings", "Norfolk"]]
+        if node["@type"] == "FAQPage":  # must match the FAQs visitors actually see
+            node["mainEntity"] = [{"@type": "Question", "name": H.unescape(q.strip()),
+                                   "acceptedAnswer": {"@type": "Answer", "text": H.unescape(" ".join(a.split()))}}
+                                  for q, a in faqs]
     write("index.html", page(
-        "", "Good Life Lending | Hard Money Loans for Real Estate Investors | Fund in 7–10 Days",
-        "Good Life Lending provides fast, character-based hard money loans for fix-and-flip investors. Close in 7–10 days — not the 25–40+ days banks take. Apply today.",
-        body, extra_head=og, ld=read("home-schema.json").rstrip(), embeds=True))
+        "", "Nebraska Hard Money Lender & Fix and Flip Loans | Good Life Lending",
+        "Good Life Lending is a direct hard money lender in Nebraska. Fast fix-and-flip, bridge and rental loans in Omaha, Lincoln and statewide — funded in 7–10 days.",
+        body, ld=schema, embeds=True,
+        og_title="Good Life Lending | Hard Money Loans That Close in 7–10 Days",
+        og_description="Fast, character-based hard money lending for Nebraska real estate investors. We've been on the borrower side — and we know how to say yes to the right deals."))
 
 
 REVIEWS = [
@@ -393,9 +413,9 @@ def market_page(slug, place, seo):
       <div class="container">
         <h2 class="section-title">Recently Closed Deals</h2>
         <div class="deal-grid">
-          <article class="deal-card"><img src="/assets/img/deal-brrrr.jpg" alt="Rental property funded by Good Life Lending" loading="lazy" /><p>We don't only fund fix and flips. We also help people acquire rentals. This borrower is going to BRRR this property, ideal leaving no cash into the deal.</p></article>
-          <article class="deal-card"><img src="/assets/img/deal-facelift.jpg" alt="Vacant house being renovated with Good Life Lending financing" loading="lazy" /><p>This poor house was a vacant, outdated disaster. But this borrower's a design whiz and is going to give it a serious facelift, dragging it out of the dark ages and into the present.</p></article>
-          <article class="deal-card"><img src="/assets/img/deal-lincoln-ranch.jpg" alt="Ranch home in northeast Lincoln funded by Good Life Lending" loading="lazy" /><p>Just funded this NE Lincoln ranch! Our borrower used our private funds to close fast, and now they’re gearing up to refinance and turn it into a long-term rental. Smart move!</p></article>
+          <article class="deal-card"><img src="/assets/img/deal-brrrr.jpg" width="843" height="524" alt="Rental property funded by Good Life Lending" loading="lazy" /><p>We don't only fund fix and flips. We also help people acquire rentals. This borrower is going to BRRR this property, ideal leaving no cash into the deal.</p></article>
+          <article class="deal-card"><img src="/assets/img/deal-facelift.jpg" width="750" height="1000" alt="Vacant house being renovated with Good Life Lending financing" loading="lazy" /><p>This poor house was a vacant, outdated disaster. But this borrower's a design whiz and is going to give it a serious facelift, dragging it out of the dark ages and into the present.</p></article>
+          <article class="deal-card"><img src="/assets/img/deal-lincoln-ranch.jpg" width="514" height="540" alt="Ranch home in northeast Lincoln funded by Good Life Lending" loading="lazy" /><p>Just funded this NE Lincoln ranch! Our borrower used our private funds to close fast, and now they’re gearing up to refinance and turn it into a long-term rental. Smart move!</p></article>
         </div>
       </div>
     </section>
@@ -439,7 +459,7 @@ def market_page(slug, place, seo):
 
     <section>
       <div class="container founder">
-        <img src="/assets/img/josh-nix.jpg" alt="Josh Nix, founder of Good Life Lending" loading="lazy" />
+        <img src="/assets/img/josh-nix.jpg" width="1000" height="1000" alt="Josh Nix, founder of Good Life Lending" loading="lazy" />
         <div>
           <p class="section-eyebrow">Here to Help</p>
           <h2 class="section-title">Josh Nix - Founder</h2>
@@ -450,7 +470,19 @@ def market_page(slug, place, seo):
       </div>
     </section>
   </main>"""
-    write(f"{slug}.html", page(slug, seo["title"], seo["description"], body, ld=seo["ld"], embeds=True))
+    crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{DOMAIN}/"},
+        {"@type": "ListItem", "position": 2, "name": f"Hard Money Lenders {place}", "item": f"{DOMAIN}/{slug}"}]}
+    ld = seo["ld"]
+    if ld is None:  # the GHL Nebraska page had no schema; reuse the city schema scoped to Nebraska
+        txt = json.dumps(json.loads(read("seo.json"))["omaha-hard-money-lenders"]["ld"], ensure_ascii=False)
+        for old, new in [("omaha-hard-money-lenders", slug), ("Hard Money Lenders Omaha, NE", "Hard Money Lenders Nebraska"),
+                         ("Hard Money Lenders Omaha", "Hard Money Lenders Nebraska"), ("— Omaha", "— Nebraska"),
+                         ("in Omaha", "in Nebraska"), ("the Omaha investment", "the Nebraska investment"),
+                         ('"areaServed": "Omaha, NE"', '"areaServed": "Nebraska"'), ("across Omaha and Nebraska", "across Nebraska")]:
+            txt = txt.replace(old, new)
+        ld = json.loads(txt)
+    write(f"{slug}.html", page(slug, seo["title"], seo["description"], body, ld=[ld, crumbs], embeds=True))
 
 
 def simple_page(slug, title, description, h1, inner, *, eyebrow="", embeds=False, noindex=False):
@@ -486,19 +518,19 @@ def build_pages():
         </div>""", noindex=True)
 
     # /apply — GHL "Loan Request" form (the Borrower Scorecard links here)
-    simple_page("apply", "Apply Now | Good Life Lending", "Request a hard money loan from Good Life Lending.", "Apply Now",
+    simple_page("apply", "Apply for a Hard Money Loan | Good Life Lending", "Request a fix-and-flip or hard money loan from Good Life Lending. Share the property, purchase price, loan amount and closing date.", "Apply Now",
                 f"""        <div class="card" style="max-width:760px;margin:0 auto;">
           {LOAN_FORM_EMBED}
         </div>""", embeds=True)
 
     # /pre-qualify — Borrower Scorecard, verbatim from the GHL custom code element
-    simple_page("pre-qualify", "Do You Qualify? | Good Life Lending",
+    simple_page("pre-qualify", "Do You Qualify for a Hard Money Loan? | Good Life Lending",
                 "Take the 60-second Good Life Lending Borrower Scorecard and see how you stack up.",
-                "Do You Qualify?", read("scorecard.html"), eyebrow="Borrower Scorecard")
+                "Do You Qualify?", read("scorecard.html").replace('<meta charset="UTF-8">\n', ""), eyebrow="Borrower Scorecard")
 
-    simple_page("privacy-policy", "Privacy Policy | Good Life Lending", "", "Privacy Policy", PRIVACY)
-    simple_page("terms", "Terms & Conditions | Good Life Lending", "", "Terms &amp; Conditions", TERMS)
-    simple_page("eula", "EULA", seo["eula"]["description"], "End-User License Agreement", EULA)
+    simple_page("privacy-policy", "Privacy Policy | Good Life Lending", "How Good Life Lending collects, uses and protects your information, including text message privacy and how to opt out.", "Privacy Policy", PRIVACY)
+    simple_page("terms", "Terms & Conditions | Good Life Lending", "Terms and conditions for using the Good Life Lending website and applying for a hard money or fix-and-flip loan.", "Terms &amp; Conditions", TERMS)
+    simple_page("eula", "End-User License Agreement | Good Life Lending", seo["eula"]["description"], "End-User License Agreement", EULA)
 
     # Old GHL URLs -> new homes
     redirect("home.html", "/")
@@ -525,7 +557,7 @@ def build_pages():
             "grand-island-hard-money-lenders", "kearney-hard-money-lenders", "pre-qualify", "apply",
             "privacy-policy", "terms", "eula"]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-          + "".join(f"  <url><loc>{DOMAIN}/{u}</loc></url>\n" for u in urls) + "</urlset>\n")
+          + "".join(f"  <url><loc>{DOMAIN}/{u}</loc><lastmod>{LASTMOD}</lastmod></url>\n" for u in urls) + "</urlset>\n")
     write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n")
     write("CNAME", "goodlife-lending.com\n")
     write(".nojekyll", "")
