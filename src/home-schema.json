@@ -1,0 +1,125 @@
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FinancialService",
+        "@id": "https://goodlife-lending.com/#organization",
+        "name": "Good Life Lending",
+        "url": "https://goodlife-lending.com",
+        "logo": "https://goodlife-lending.com/assets/img/logo.png",
+        "description": "Good Life Lending provides fast, character-based hard money loans for real estate investors. We specialize in fix-and-flip financing that closes in 7–10 days.",
+        "slogan": "Experience Opportunity",
+        "email": "josh@goodlife-lending.com",
+        "telephone": "402-770-7950",
+        "address": {
+          "@type": "PostalAddress",
+          "postOfficeBoxNumber": "PO Box 5206",
+          "addressLocality": "Lincoln",
+          "addressRegion": "NE",
+          "postalCode": "68505",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.instagram.com/good_life_lending",
+          "https://www.facebook.com/goodlifelending",
+          "https://www.linkedin.com/company/goodlifelending"
+        ],
+        "knowsAbout": [
+          "Hard Money Lending",
+          "Fix and Flip Loans",
+          "Private Money Lending",
+          "Real Estate Investment Financing",
+          "Bridge Loans"
+        ],
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Loan Products",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Fix and Flip Loans",
+                "description": "Short-term hard money loans for real estate investors buying and rehabbing properties."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Bridge Loans for Investors",
+                "description": "Fast bridge financing to capitalize on time-sensitive real estate opportunities."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Private Money Lending",
+                "description": "Character-based private lending that weighs the deal, the borrower, and the opportunity."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://goodlife-lending.com/#website",
+        "url": "https://goodlife-lending.com",
+        "name": "Good Life Lending",
+        "publisher": {
+          "@id": "https://goodlife-lending.com/#organization"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://goodlife-lending.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How fast can Good Life Lending fund a loan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We typically move from approval to funding in 7–10 days. Traditional banks average 25–40+ days. If speed is part of your deal, that difference matters."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do I need to qualify for a hard money loan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Good Life Lending requires decent credit, real cash in the deal, and a solid opportunity. We evaluate the person and the deal together — not just a score on a page."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of loans does Good Life Lending offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We specialize in fix-and-flip loans, bridge loans for investors, and private money lending for real estate investment properties."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Good Life Lending work with first-time investors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We work with investors on their first or second flip as well as experienced investors looking to scale. What matters is the deal quality, your credit, and your cash position."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Good Life Lending a lender of last resort?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. We're selective because we want our borrowers to succeed. We fund the right people with the right deals — not everyone who applies."
+            }
+          }
+        ]
+      }
+    ]
+  }

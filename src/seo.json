@@ -1,0 +1,476 @@
+{
+  "hard-money-lenders-nebraska": {
+    "title": "Hard Money Lenders Nebraska | Good Life Lending",
+    "description": "Looking for hard money lenders in Nebraska? Good Life Lending has over 15 years fix and flip loan experience, great customer service & same day approval.",
+    "ld": null
+  },
+  "omaha-hard-money-lenders": {
+    "title": "Hard Money Lenders Omaha, NE | Hard Money Loans",
+    "description": "Looking for hard money lenders in Omaha, NE? Good Life Lending offers fast approvals, same-day quotes, and flexible fix & flip loans statewide.",
+    "ld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@id": "https://goodlife-lending.com/#organization",
+          "@type": "FinancialService",
+          "name": "Good Life Lending",
+          "url": "https://goodlife-lending.com/omaha-hard-money-lenders",
+          "image": "https://storage.googleapis.com/msgsndr/n5wBPuT4i7ZbRZ4xP6G6/media/687a46cd791e23891e875605.png",
+          "telephone": "402-770-7950",
+          "email": "josh@goodlife-lending.com",
+          "address": {
+            "@type": "PostalAddress",
+            "postOfficeBoxNumber": "PO Box 5206",
+            "addressLocality": "Lincoln",
+            "addressRegion": "NE",
+            "postalCode": "68505",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            "Omaha, NE",
+            "Lincoln, NE",
+            "Bellevue, NE",
+            "Grand Island, NE",
+            "Kearney, NE",
+            "Fremont, NE",
+            "Hastings, NE",
+            "Norfolk, NE",
+            "Nebraska"
+          ],
+          "description": "Direct hard money lender providing fix & flip and investment property financing across Omaha and Nebraska with fast approvals, same-day quotes, and flexible underwriting.",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "3"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Ryan Omel"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "My wife and I have worked with Josh on several projects over the past 5 years. He and the team at Good Life Lending have been great to work with. Always willing to meet our scheduled closing timeline even if it has been short notice. Definitely would recommend Good Life Lending for any real estate transaction!"
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Christie Lebsack"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Josh and his team at Good Life Lending have been great to work with. It has been amazing watching the real estate projects evolve and grow over the years. Josh is extremely knowledgeable and experienced about the market, ranging from residential to commercial investments. Look forward in making future investments."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Clemson Nwinye"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Josh at Good Life Lending has been awesome to work with. Experience investor with great insight on the market. I look forward to furthering the relationship with Josh and his team. My vision is to create affordable housing for the Omaha metro and to have a lending partner that understands that goal is mutually beneficial."
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": "Fix & Flip Loans — Omaha",
+          "serviceType": "Fix & Flip Loans",
+          "provider": {
+            "@id": "https://goodlife-lending.com/#organization"
+          },
+          "description": "Good Life Lending specializes in Fix & Flip Loans in Omaha for both new and seasoned investors — financing for acquisition and renovation, high leverage options, quick draws, and support from a team that understands the Omaha investment landscape.",
+          "areaServed": "Omaha, NE"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Hard Money Lenders Omaha, NE",
+          "url": "https://goodlife-lending.com/omaha-hard-money-lenders",
+          "headline": "Hard Money Lenders Omaha",
+          "description": "Fix and Flip Loan Experts. Good Life Lending is your go-to partner for Fix & Flip Loans in Omaha, helping investors secure the capital they need to acquire, renovate, and resell properties with confidence.",
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Fix & Flip Loans — Omaha"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Josh Nix",
+          "jobTitle": "Founder",
+          "email": "josh@goodlife-lending.com",
+          "image": "https://storage.googleapis.com/msgsndr/n5wBPuT4i7ZbRZ4xP6G6/media/687a89ae0657f05765e8e089.jpeg",
+          "worksFor": {
+            "@id": "https://goodlife-lending.com/#organization"
+          }
+        }
+      ]
+    }
+  },
+  "lincoln-hard-money-lenders": {
+    "title": "Hard Money Lenders Lincoln, NE | Hard Money Loans",
+    "description": "Looking for hard money lenders in Lincoln, NE? Good Life Lending offers fast approvals, same-day quotes, and flexible fix & flip loans statewide.",
+    "ld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@id": "https://goodlife-lending.com/#organization",
+          "@type": "FinancialService",
+          "name": "Good Life Lending",
+          "url": "https://goodlife-lending.com/lincoln-hard-money-lenders",
+          "image": "https://storage.googleapis.com/msgsndr/n5wBPuT4i7ZbRZ4xP6G6/media/687a46cd791e23891e875605.png",
+          "telephone": "402-770-7950",
+          "email": "josh@goodlife-lending.com",
+          "address": {
+            "@type": "PostalAddress",
+            "postOfficeBoxNumber": "PO Box 5206",
+            "addressLocality": "Lincoln",
+            "addressRegion": "NE",
+            "postalCode": "68505",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            "Omaha, NE",
+            "Lincoln, NE",
+            "Bellevue, NE",
+            "Grand Island, NE",
+            "Kearney, NE",
+            "Fremont, NE",
+            "Hastings, NE",
+            "Norfolk, NE",
+            "Nebraska"
+          ],
+          "description": "Direct hard money lender providing fix & flip and investment property financing across Lincoln and Nebraska with fast approvals, same-day quotes, and flexible underwriting.",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "3"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Ryan Omel"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "My wife and I have worked with Josh on several projects over the past 5 years. He and the team at Good Life Lending have been great to work with. Always willing to meet our scheduled closing timeline even if it has been short notice. Definitely would recommend Good Life Lending for any real estate transaction!"
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Christie Lebsack"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Josh and his team at Good Life Lending have been great to work with. It has been amazing watching the real estate projects evolve and grow over the years. Josh is extremely knowledgeable and experienced about the market, ranging from residential to commercial investments. Look forward in making future investments."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Clemson Nwinye"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Josh at Good Life Lending has been awesome to work with. Experience investor with great insight on the market. I look forward to furthering the relationship with Josh and his team. My vision is to create affordable housing for the Omaha metro and to have a lending partner that understands that goal is mutually beneficial."
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": "Fix & Flip Loans — Lincoln",
+          "serviceType": "Fix & Flip Loans",
+          "provider": {
+            "@id": "https://goodlife-lending.com/#organization"
+          },
+          "description": "Good Life Lending specializes in Fix & Flip Loans in Lincoln for both new and seasoned investors — financing for acquisition and renovation, high leverage options, quick draws, and support from a team that understands the Lincoln investment landscape.",
+          "areaServed": "Lincoln, NE"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Hard Money Lenders Lincoln, NE",
+          "url": "https://goodlife-lending.com/lincoln-hard-money-lenders",
+          "headline": "Hard Money Lenders Lincoln",
+          "description": "Fix and Flip Loan Experts. Good Life Lending is your go-to partner for Fix & Flip Loans in Lincoln, helping investors secure the capital they need to acquire, renovate, and resell properties with confidence.",
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Fix & Flip Loans — Lincoln"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Josh Nix",
+          "jobTitle": "Founder",
+          "email": "josh@goodlife-lending.com",
+          "image": "https://storage.googleapis.com/msgsndr/n5wBPuT4i7ZbRZ4xP6G6/media/687a89ae0657f05765e8e089.jpeg",
+          "worksFor": {
+            "@id": "https://goodlife-lending.com/#organization"
+          }
+        }
+      ]
+    }
+  },
+  "grand-island-hard-money-lenders": {
+    "title": "Hard Money Lenders Grand Island, NE | Hard Money Loans",
+    "description": "Looking for hard money lenders in Grand Island, NE? Good Life Lending offers fast approvals, same-day quotes, and flexible fix & flip loans.",
+    "ld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@id": "https://goodlife-lending.com/#organization",
+          "@type": "FinancialService",
+          "name": "Good Life Lending",
+          "url": "https://goodlife-lending.com/grand-island-hard-money-lenders",
+          "image": "https://storage.googleapis.com/msgsndr/n5wBPuT4i7ZbRZ4xP6G6/media/687a46cd791e23891e875605.png",
+          "telephone": "402-770-7950",
+          "email": "josh@goodlife-lending.com",
+          "address": {
+            "@type": "PostalAddress",
+            "postOfficeBoxNumber": "PO Box 5206",
+            "addressLocality": "Lincoln",
+            "addressRegion": "NE",
+            "postalCode": "68505",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            "Omaha",
+            "Lincoln",
+            "Bellevue",
+            "Grand Island",
+            "Kearney",
+            "Fremont",
+            "Hastings",
+            "Norfolk"
+          ],
+          "description": "Direct hard money lender providing fix & flip and investment property financing across Grand Island and Nebraska with fast approvals and flexible underwriting.",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "3"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Ryan Omel"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "My wife and I have worked with Josh on several projects over the past 5 years. He and the team at Good Life Lending have been great to work with. Always willing to meet our scheduled closing timeline even if it has been short notice. Photo is just one of the more recent houses Josh helped us with. Definitely would recommend Good Life Lending for any real estate transaction!"
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Christie Lebsack"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Josh and his team at Good Life Lending have been great to work with. It has been amazing watching the real estate projects evolve and grow over the years. Josh is extremely knowledgeable and experienced about the market, ranging from residential to commercial investments. Look forward in making future investments."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Clemson Nwinye"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Josh at Good Life Lending has been awesome to work with. Experience investor with great insight on the market. I look forward to furthering the relationship with Josh and his team. My vision is to create affordable housing for the Omaha metro and to have a lending partner that understands that goal is mutually beneficial."
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": "Fix & Flip Loans — Grand Island",
+          "serviceType": "Fix & Flip Loans",
+          "provider": {
+            "@id": "https://goodlife-lending.com/#organization"
+          },
+          "description": "Good Life Lending specializes in providing Fix & Flip Loans in Grand Island designed for both new and seasoned investors — financing for acquisition and renovation; high leverage options; quick draws for renovation; support from a team that understands the Grand Island investment landscape.",
+          "areaServed": "Grand Island, NE"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Hard Money Lenders Grand Island",
+          "headline": "Hard Money Lenders Grand Island",
+          "description": "Fix and Flip Loan Experts. Good Life Lending is your go-to partner for Fix & Flip Loans in Grand Island, helping investors secure the capital they need to acquire, renovate, and resell properties with confidence.",
+          "image": "https://storage.googleapis.com/msgsndr/c3cmUrbBhdgs54adfIYP/media/6661420f6cee2ba4ab5c644a.png",
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Fix & Flip Loans — Grand Island"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Josh Nix",
+          "jobTitle": "Founder",
+          "email": "josh@goodlife-lending.com",
+          "image": "https://storage.googleapis.com/msgsndr/n5wBPuT4i7ZbRZ4xP6G6/media/687a89ae0657f05765e8e089.jpeg",
+          "worksFor": {
+            "@id": "https://goodlife-lending.com/#organization"
+          }
+        }
+      ]
+    }
+  },
+  "kearney-hard-money-lenders": {
+    "title": "Hard Money Lenders Kearney, NE | Private Money Lenders",
+    "description": "Looking for hard money lenders in Kearney, NE? Good Life Lending offers fast approvals, same-day quotes, and flexible fix & flip loans statewide.",
+    "ld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@id": "https://goodlife-lending.com/#organization",
+          "@type": "FinancialService",
+          "name": "Good Life Lending",
+          "url": "https://goodlife-lending.com/kearney-hard-money-lenders",
+          "image": "https://storage.googleapis.com/msgsndr/n5wBPuT4i7ZbRZ4xP6G6/media/687a46cd791e23891e875605.png",
+          "telephone": "402-770-7950",
+          "email": "josh@goodlife-lending.com",
+          "address": {
+            "@type": "PostalAddress",
+            "postOfficeBoxNumber": "PO Box 5206",
+            "addressLocality": "Lincoln",
+            "addressRegion": "NE",
+            "postalCode": "68505",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            "Omaha, NE",
+            "Lincoln, NE",
+            "Bellevue, NE",
+            "Grand Island, NE",
+            "Kearney, NE",
+            "Fremont, NE",
+            "Hastings, NE",
+            "Norfolk, NE",
+            "Nebraska"
+          ],
+          "description": "Direct hard money lender providing fix & flip and investment property financing across Kearney and Nebraska with fast approvals, same-day quotes, and flexible underwriting.",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "3"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Ryan Omel"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "My wife and I have worked with Josh on several projects over the past 5 years. He and the team at Good Life Lending have been great to work with. Always willing to meet our scheduled closing timeline even if it has been short notice. Definitely would recommend Good Life Lending for any real estate transaction!"
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Christie Lebsack"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Josh and his team at Good Life Lending have been great to work with. It has been amazing watching the real estate projects evolve and grow over the years. Josh is extremely knowledgeable and experienced about the market, ranging from residential to commercial investments. Look forward in making future investments."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Clemson Nwinye"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Josh at Good Life Lending has been awesome to work with. Experience investor with great insight on the market. I look forward to furthering the relationship with Josh and his team. My vision is to create affordable housing for the Omaha metro and to have a lending partner that understands that goal is mutually beneficial."
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": "Fix & Flip Loans — Kearney",
+          "serviceType": "Fix & Flip Loans",
+          "provider": {
+            "@id": "https://goodlife-lending.com/#organization"
+          },
+          "description": "Good Life Lending specializes in Fix & Flip Loans in Kearney for both new and seasoned investors — financing for acquisition and renovation, high leverage options, quick draws, and support from a team that understands the Kearney investment landscape.",
+          "areaServed": "Kearney, NE"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Hard Money Lenders Kearney, NE",
+          "url": "https://goodlife-lending.com/kearney-hard-money-lenders",
+          "headline": "Hard Money Lenders Kearney",
+          "description": "Fix and Flip Loan Experts. Good Life Lending is your go-to partner for Fix & Flip Loans in Kearney, helping investors secure the capital they need to acquire, renovate, and resell properties with confidence.",
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Fix & Flip Loans — Kearney"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Josh Nix",
+          "jobTitle": "Founder",
+          "email": "josh@goodlife-lending.com",
+          "image": "https://storage.googleapis.com/msgsndr/n5wBPuT4i7ZbRZ4xP6G6/media/687a89ae0657f05765e8e089.jpeg",
+          "worksFor": {
+            "@id": "https://goodlife-lending.com/#organization"
+          }
+        }
+      ]
+    }
+  },
+  "thank-you": {
+    "title": "Thank You",
+    "description": "",
+    "ld": null
+  },
+  "eula": {
+    "title": "EULA",
+    "description": "End-User License Agreement for KPI Dashboard application. Terms and conditions for using our QuickBooks-integrated financial reporting tool.",
+    "ld": null
+  }
+}
