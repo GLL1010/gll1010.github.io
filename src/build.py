@@ -328,7 +328,7 @@ def market_page(slug, place, seo):
           <p class="section-eyebrow">Fast, Flexible, and Investor-Friendly Funding from Good Life Lending</p>
           <h2 class="section-title">Your Trusted Hard Money Lender in {place}</h2>
           <p class="section-lead" style="margin-bottom:20px;">Good Life Lending is committed to helping real estate investors succeed. We offer reliable hard money loans throughout {place}, providing the flexibility traditional banks don't offer.</p>
-          <p class="section-lead" style="margin-bottom:20px;">With decades of combined industry experience, we understand the urgency behind investment opportunities — and we’re here to help you act quickly.</p>
+          <p class="section-lead" style="margin-bottom:20px;">Josh has been investing in real estate since 2008, so we understand the urgency behind a good deal — and we’re here to help you act quickly.</p>
           <p class="section-lead" style="margin-bottom:20px;">Whether you're targeting Omaha, Lincoln, Grand Island, or any surrounding Nebraska markets, we fund deals fast, with a simple approval process and no unnecessary hurdles.</p>
           <p><strong>Or call us: <a href="tel:+14027707950">(402) 770-7950</a></strong></p>
         </div>
@@ -374,8 +374,8 @@ def market_page(slug, place, seo):
           <h2 class="section-title">Why Investors Choose Good Life Lending</h2>
           <ul class="checklist">
             <li>Fast approvals &amp; fast closings</li>
-            <li>Competitive rates with transparent terms</li>
-            <li>Minimal documentation required</li>
+            <li>Straight answers about your deal — no runaround</li>
+            <li>A simple, 100% digital process</li>
             <li>Flexible underwriting that focuses on the property and your strategy</li>
             <li>Local expertise in {place} real estate markets</li>
             <li>Direct private lenders — no brokers, no delays</li>
@@ -400,25 +400,23 @@ def market_page(slug, place, seo):
           <p><strong>Our loans offer:</strong></p>
           <ul class="checklist">
             <li>Financing for acquisition + renovation</li>
-            <li>High leverage options</li>
+            <li>Character-based underwriting that looks at you and the deal</li>
             <li>Quick draws for renovation</li>
             <li>Support from a team that understands the {place} investment landscape</li>
           </ul>
           <p style="color:var(--muted);">Whether you’re flipping a home in Omaha, updating a rental in Lincoln, or renovating a distressed property anywhere in the state, we fund projects of all sizes.</p>
         </div>
         <div>
-          <h2 class="section-title">{place} Hard Money Loan Terms</h2>
-          <p style="color:var(--muted);">Good Life Lending offers some of the most competitive and investor-friendly loan options available.</p>
-          <p class="mt-24"><strong>Typical Loan Terms Include:</strong></p>
-          <table class="terms-table">
-            <tr><td>Loan Amount</td><td>From $75,000 up to several million</td></tr>
-            <tr><td>Loan Type</td><td>Interest-only</td></tr>
-            <tr><td>Loan-to-Value (LTV)</td><td>Up to 70% of ARV (After Repair Value)</td></tr>
-            <tr><td>Loan Term</td><td>6–24 months</td></tr>
-            <tr><td>Interest Rates</td><td>Competitive market rates</td></tr>
-            <tr><td>Closings</td><td>As fast as 5–7 days</td></tr>
-          </table>
-          <p style="color:var(--muted);">Every deal is unique — and we structure our loans to help you succeed.</p>
+          <h2 class="section-title">What We Look For in a {place} Deal</h2>
+          <p style="color:var(--muted);">Every deal is different, so we don't publish one-size-fits-all terms. Here's what we look at instead:</p>
+          <ul class="checklist">
+            <li>Decent credit</li>
+            <li>Real cash in the deal</li>
+            <li>A solid property with numbers that make sense</li>
+            <li>Your rehab plan and budget</li>
+            <li>Your experience — or your plan, if this is your first flip</li>
+          </ul>
+          <p style="color:var(--muted);">Tell us about your deal and we'll give you a straight answer, and clear terms, quickly.</p>
         </div>
       </div>
     </section>
@@ -429,7 +427,7 @@ def market_page(slug, place, seo):
         <p class="section-lead" style="margin-bottom:12px;">Real estate opportunities move fast, and so do we. Our {place} hard money loan process is quick, investor-friendly, and designed to help you close without delays.</p>
         <ol class="steps-list">
           <li>Submit your property &amp; project details</li>
-          <li>Receive a same-day quote</li>
+          <li>Get a quick quote</li>
           <li>Complete a quick underwriting review</li>
           <li>Sign final documents</li>
           <li>Get funded fast — often in under a week</li>
@@ -457,7 +455,7 @@ def market_page(slug, place, seo):
           <p style="color:var(--muted);">As a direct lender, Good Life Lending has complete control over the loan process. That means faster approvals, flexible underwriting, and a team dedicated solely to investor success.</p>
           <p class="mt-24"><strong>Benefits of Working With Good Life Lending</strong></p>
           <ul class="checklist">
-            <li>{place}’s go-to hard money team</li>
+            <li>A Nebraska-based, direct hard money lender</li>
             <li>Quick and responsive communication</li>
             <li>Loans built specifically for fix &amp; flip investors</li>
             <li>Local market insights</li>
@@ -489,7 +487,7 @@ def market_page(slug, place, seo):
     <section id="cta">
       <div class="container">
         <h2>Apply for a {place} Hard Money Loan Today</h2>
-        <p>Ready to secure fast funding for your next fix &amp; flip project? Good Life Lending makes it easy to get approved and get funded — quickly. Get started today and receive a same-day loan quote.</p>
+        <p>Ready to secure fast funding for your next fix &amp; flip project? Good Life Lending makes it easy to get approved and get funded — quickly. Get started today and we’ll follow up within one business day.</p>
         <div class="cta-group">
           <a href="#quote" class="btn btn-gold">Get Quote Now</a>
           <a href="{APPLY_URL}" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Apply for Your {place} Hard Money Loan</a>
