@@ -4,7 +4,9 @@
 Run:  python3 src/build.py
 Edit page content here or in src/*.html, then rebuild and commit docs/.
 """
-import json, os, re, shutil, html as H
+import json, os, re, sys, shutil, html as H
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from city_copy import CITY_COPY
 
 SRC = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(os.path.dirname(SRC), "docs")
@@ -297,6 +299,14 @@ AREAS = [("Omaha", "/omaha-hard-money-lenders"), ("Lincoln", "/lincoln-hard-mone
 
 
 def market_page(slug, place, seo):
+    cc = CITY_COPY[slug]
+    e = H.escape
+    local_paras = "\n".join(f'          <p style="color:var(--muted);margin-bottom:16px;">{e(t)}</p>' for t in cc["paragraphs"])
+    local_areas = "\n".join(f"            <li>{e(a)}</li>" for a in cc["areas"])
+    local_fits = "\n".join(f"            <li>{e(f)}</li>" for f in cc["fits"])
+    local_faqs = "\n".join(f'          <div class="faq-item"><h3>{e(q)}</h3><p>{e(a)}</p></div>' for q, a in cc["faqs"])
+    faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in cc["faqs"]]}
     """Content ported from the GHL market pages (same copy; city name swapped)."""
     reviews = "\n".join(
         f'          <article class="review-card"><h3>"{t}"</h3><p>{H.escape(b)}</p><p class="who">{w}</p></article>'
@@ -307,12 +317,12 @@ def market_page(slug, place, seo):
     <div class="container">
       <p class="hero-eyebrow">Fix and Flip Loan Experts</p>
       <h1>Hard Money Lenders {"Nebraska" if place == "Nebraska" else place}</h1>
-      <p>When it comes to real estate investing in {place}, you need a hard money lender you can trust — one who moves quickly, offers fair terms, and understands the local market. Good Life Lending is your go-to partner for Fix &amp; Flip Loans in {place}, helping investors secure the capital they need to acquire, renovate, and resell properties with confidence.</p>
+      <p>{e(cc["intro"])}</p>
     </div>
   </header>
 
   <main>
-    <section id="quote" style="background:var(--bg-light);">
+    <section id="quote">
       <div class="container split">
         <div>
           <p class="section-eyebrow">Fast, Flexible, and Investor-Friendly Funding from Good Life Lending</p>
@@ -324,6 +334,26 @@ def market_page(slug, place, seo):
         </div>
         <div class="card">
           {SURVEY_EMBED}
+        </div>
+      </div>
+    </section>
+
+    <section id="local" style="background:var(--bg-light);">
+      <div class="container split">
+        <div>
+          <p class="section-eyebrow">Local Market</p>
+          <h2 class="section-title">{e(cc["heading"])}</h2>
+{local_paras}
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom:12px;">{e(cc["areas_heading"])}</h3>
+          <ul class="areas">
+{local_areas}
+          </ul>
+          <h3 style="margin:20px 0 4px;">Deals that tend to fit</h3>
+          <ul class="checklist">
+{local_fits}
+          </ul>
         </div>
       </div>
     </section>
@@ -446,6 +476,16 @@ def market_page(slug, place, seo):
       </div>
     </section>
 
+    <section id="faq">
+      <div class="container">
+        <p class="section-eyebrow">Common Questions</p>
+        <h2 class="section-title">{place} Hard Money Loan FAQs</h2>
+        <div class="faq-grid">
+{local_faqs}
+        </div>
+      </div>
+    </section>
+
     <section id="cta">
       <div class="container">
         <h2>Apply for a {place} Hard Money Loan Today</h2>
@@ -482,7 +522,7 @@ def market_page(slug, place, seo):
                          ('"areaServed": "Omaha, NE"', '"areaServed": "Nebraska"'), ("across Omaha and Nebraska", "across Nebraska")]:
             txt = txt.replace(old, new)
         ld = json.loads(txt)
-    write(f"{slug}.html", page(slug, seo["title"], seo["description"], body, ld=[ld, crumbs], embeds=True))
+    write(f"{slug}.html", page(slug, seo["title"], seo["description"], body, ld=[ld, crumbs, faq_ld], embeds=True))
 
 
 def simple_page(slug, title, description, h1, inner, *, eyebrow="", embeds=False, noindex=False):
@@ -526,7 +566,7 @@ def build_pages():
     # /pre-qualify — Borrower Scorecard, verbatim from the GHL custom code element
     simple_page("pre-qualify", "Do You Qualify for a Hard Money Loan? | Good Life Lending",
                 "Take the 60-second Good Life Lending Borrower Scorecard and see how you stack up.",
-                "Do You Qualify?", read("scorecard.html").replace('<meta charset="UTF-8">\n', ""), eyebrow="Borrower Scorecard")
+                "Do You Qualify?", read("scorecard.html").replace('<meta charset="UTF-8">\n', ""), eyebrow="60-Second Check")
 
     simple_page("privacy-policy", "Privacy Policy | Good Life Lending", "How Good Life Lending collects, uses and protects your information, including text message privacy and how to opt out.", "Privacy Policy", PRIVACY)
     simple_page("terms", "Terms & Conditions | Good Life Lending", "Terms and conditions for using the Good Life Lending website and applying for a hard money or fix-and-flip loan.", "Terms &amp; Conditions", TERMS)
