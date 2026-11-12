@@ -407,7 +407,7 @@ def market_page(slug, place, seo):
           <p style="color:var(--muted);">Whether you’re flipping a home in Omaha, updating a rental in Lincoln, or renovating a distressed property anywhere in the state, we fund projects of all sizes.</p>
         </div>
         <div>
-          <h2 class="section-title">What We Look For in a {place} Deal</h2>
+          <h2 class="section-title">What We Look For in Every {place} Deal</h2>
           <p style="color:var(--muted);">Every deal is different, so we don't publish one-size-fits-all terms. Here's what we look at instead:</p>
           <ul class="checklist">
             <li>Decent credit</li>
