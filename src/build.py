@@ -652,7 +652,7 @@ PRIVACY = f"""        <div class="prose">
 TERMS = """        <div class="prose">
           <p class="meta">Effective Date: September 8, 2025</p>
           <h2>1. Introduction</h2>
-          <p>Welcome to Good Life Lending (“we,” “us,” or “our”). By accessing or using our website at <a href="https://goodlife-lending.com">goodlife-lending.com</a> (“Site”), you agree to be bound by these Terms &amp; Conditions (“Terms”). We offer financing solutions—especially designed for fix-and-flip real estate investors—with quick decisions, simple paperwork, and no credit checks.</p>
+          <p>Welcome to Good Life Lending (“we,” “us,” or “our”). By accessing or using our website at <a href="https://goodlife-lending.com">goodlife-lending.com</a> (“Site”), you agree to be bound by these Terms &amp; Conditions (“Terms”). We offer financing solutions—especially designed for fix-and-flip real estate investors—with quick decisions and simple paperwork.</p>
           <h2>2. Eligibility</h2>
           <p>Use of the Site is restricted to individuals or business entities that are legally capable of entering into contracts. You affirm that you are at least 18 years old (or the applicable age in your jurisdiction) and meet any other eligibility criteria we may set.</p>
           <h2>3. Use of the Site</h2>
