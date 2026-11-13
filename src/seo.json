@@ -87,12 +87,12 @@
         },
         {
           "@type": "Service",
-          "name": "Fix & Flip Loans — Omaha",
+          "name": "Fix & Flip Loans in Omaha",
           "serviceType": "Fix & Flip Loans",
           "provider": {
             "@id": "https://goodlife-lending.com/#organization"
           },
-          "description": "Good Life Lending specializes in Fix & Flip Loans in Omaha for both new and seasoned investors — financing for acquisition and renovation, quick draws, and support from a team that understands the Omaha investment landscape.",
+          "description": "Good Life Lending specializes in Fix & Flip Loans in Omaha for both new and seasoned investors: financing for acquisition and renovation, quick draws, and support from a team that understands the Omaha investment landscape.",
           "areaServed": "Omaha, NE"
         },
         {
@@ -103,7 +103,7 @@
           "description": "Fix and Flip Loan Experts. Good Life Lending is a direct, local partner for Fix & Flip Loans in Omaha, helping investors secure the capital they need to acquire, renovate, and resell properties with confidence.",
           "mainEntity": {
             "@type": "Service",
-            "name": "Fix & Flip Loans — Omaha"
+            "name": "Fix & Flip Loans in Omaha"
           }
         },
         {
@@ -202,12 +202,12 @@
         },
         {
           "@type": "Service",
-          "name": "Fix & Flip Loans — Lincoln",
+          "name": "Fix & Flip Loans in Lincoln",
           "serviceType": "Fix & Flip Loans",
           "provider": {
             "@id": "https://goodlife-lending.com/#organization"
           },
-          "description": "Good Life Lending specializes in Fix & Flip Loans in Lincoln for both new and seasoned investors — financing for acquisition and renovation, quick draws, and support from a team that understands the Lincoln investment landscape.",
+          "description": "Good Life Lending specializes in Fix & Flip Loans in Lincoln for both new and seasoned investors: financing for acquisition and renovation, quick draws, and support from a team that understands the Lincoln investment landscape.",
           "areaServed": "Lincoln, NE"
         },
         {
@@ -218,7 +218,7 @@
           "description": "Fix and Flip Loan Experts. Good Life Lending is a direct, local partner for Fix & Flip Loans in Lincoln, helping investors secure the capital they need to acquire, renovate, and resell properties with confidence.",
           "mainEntity": {
             "@type": "Service",
-            "name": "Fix & Flip Loans — Lincoln"
+            "name": "Fix & Flip Loans in Lincoln"
           }
         },
         {
@@ -316,12 +316,12 @@
         },
         {
           "@type": "Service",
-          "name": "Fix & Flip Loans — Grand Island",
+          "name": "Fix & Flip Loans in Grand Island",
           "serviceType": "Fix & Flip Loans",
           "provider": {
             "@id": "https://goodlife-lending.com/#organization"
           },
-          "description": "Good Life Lending specializes in providing Fix & Flip Loans in Grand Island designed for both new and seasoned investors — financing for acquisition and renovation; quick draws for renovation; support from a team that understands the Grand Island investment landscape.",
+          "description": "Good Life Lending specializes in providing Fix & Flip Loans in Grand Island designed for both new and seasoned investors: financing for acquisition and renovation; quick draws for renovation; support from a team that understands the Grand Island investment landscape.",
           "areaServed": "Grand Island, NE"
         },
         {
@@ -332,7 +332,7 @@
           "image": "https://storage.googleapis.com/msgsndr/c3cmUrbBhdgs54adfIYP/media/6661420f6cee2ba4ab5c644a.png",
           "mainEntity": {
             "@type": "Service",
-            "name": "Fix & Flip Loans — Grand Island"
+            "name": "Fix & Flip Loans in Grand Island"
           }
         },
         {
@@ -431,12 +431,12 @@
         },
         {
           "@type": "Service",
-          "name": "Fix & Flip Loans — Kearney",
+          "name": "Fix & Flip Loans in Kearney",
           "serviceType": "Fix & Flip Loans",
           "provider": {
             "@id": "https://goodlife-lending.com/#organization"
           },
-          "description": "Good Life Lending specializes in Fix & Flip Loans in Kearney for both new and seasoned investors — financing for acquisition and renovation, quick draws, and support from a team that understands the Kearney investment landscape.",
+          "description": "Good Life Lending specializes in Fix & Flip Loans in Kearney for both new and seasoned investors: financing for acquisition and renovation, quick draws, and support from a team that understands the Kearney investment landscape.",
           "areaServed": "Kearney, NE"
         },
         {
@@ -447,7 +447,7 @@
           "description": "Fix and Flip Loan Experts. Good Life Lending is a direct, local partner for Fix & Flip Loans in Kearney, helping investors secure the capital they need to acquire, renovate, and resell properties with confidence.",
           "mainEntity": {
             "@type": "Service",
-            "name": "Fix & Flip Loans — Kearney"
+            "name": "Fix & Flip Loans in Kearney"
           }
         },
         {

@@ -3,12 +3,12 @@
 
     :root {
       /* === GLL Brand Colors === */
-      --navy:        #334175;   /* Primary — dark navy blue */
+      --navy:        #334175;   /* Primary: dark navy blue */
       --navy-dark:   #242f56;   /* Darker shade for hovers/gradients */
       --navy-light:  #eceef5;   /* Tint for backgrounds */
-      --blue:        #4674A4;   /* Secondary — medium blue */
+      --blue:        #4674A4;   /* Secondary: medium blue */
       --blue-light:  #eaf1f8;   /* Tint for cards/backgrounds */
-      --orange:      #CC7722;   /* Accent — brand orange */
+      --orange:      #CC7722;   /* Accent: brand orange */
       --orange-light:#fdf3e3;   /* Tint for accent backgrounds */
       --text:        #1a1a1a;
       --muted:       #5a6070;

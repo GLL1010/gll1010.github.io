@@ -696,10 +696,10 @@
       // Tips shown in the "Focus areas" panel for any category that scored low
       var tips = {
         credit: "Pull your credit report and pay down revolving balances to under 30% utilization. A 50-point bump can change everything.",
-        experience: "First-timers welcome \u2014 partner with a contractor or experienced flipper on deal #1, and we can talk about co-signing options.",
+        experience: "First-timers welcome. Partner with a contractor or experienced flipper on deal #1, and we can talk about co-signing options.",
         cash: "Most lenders (us included) want to see a cushion beyond your down payment. Aim for at least $20K\u2013$30K in reserves before applying.",
         down: "We finance up to 90% of purchase + 100% of rehab, but bigger down payments unlock better terms. Save toward 20% if you can.",
-        exit: "Have a clear plan before you borrow \u2014 sell on the open market, refi into a rental, or sell to a known buyer. Vague exits scare lenders."
+        exit: "Have a clear plan before you borrow: sell on the open market, refi into a rental, or sell to a known buyer. Vague exits scare lenders."
       };
 
       // Classify each answer as strong / ok / work based on % of category max
@@ -757,7 +757,7 @@
     }
 
     // Build a pre-filled SMS deep link with the borrower's score + answers.
-    // Works on both iOS and Android \u2014 opens the user's text app with the
+    // Works on both iOS and Android; opens the user's text app with the
     // message ready to send. Their number auto-attaches when sent.
     // Buckets answers by Strength / Solid / Needs Work so Josh can see at
     // a glance what to focus on when following up.
@@ -780,7 +780,7 @@
       });
 
       var lines = [];
-      lines.push('Hi Good Life Lending \u2014 I just took your scorecard.');
+      lines.push('Hi Good Life Lending, I just took your scorecard.');
       lines.push('');
       lines.push('SCORE: ' + total + '/100 (' + tier + ')');
 
@@ -809,7 +809,7 @@
     }
 
     if (!disqualified) {
-      // Text Us on top, Call Us below \u2014 both same orange CTA style
+      // Text Us on top, Call Us below, both same orange CTA style
       html += '<a class="gll-btn gll-btn-cta" href="' + buildSmsLink() + '">Text Us</a>';
       html += '<a class="gll-btn gll-btn-cta" href="tel:' + PHONE.replace(/[^0-9]/g, '') + '">Call Us</a>';
       html += '<button class="gll-btn gll-btn-link" id="gllRestart">Start over</button>';

@@ -284,7 +284,7 @@ def build_home():
         "Direct Nebraska hard money lender. Fix-and-flip, bridge and rental loans in Omaha, Lincoln and statewide, funded in as little as 5 days.",
         body, ld=schema, embeds=True,
         og_title="Good Life Lending | Hard Money Loans That Close in as Little as 5 Days",
-        og_description="Fast, character-based hard money lending for Nebraska real estate investors. We've been on the borrower side — and we know how to say yes to the right deals."))
+        og_description="Fast, character-based hard money lending for Nebraska real estate investors. We've been on the borrower side, and we know how to say yes to the right deals."))
 
 
 REVIEWS = [
@@ -328,7 +328,7 @@ def market_page(slug, place, seo):
           <p class="section-eyebrow">Fast, Flexible, and Investor-Friendly Funding from Good Life Lending</p>
           <h2 class="section-title">Your Trusted Hard Money Lender in {place}</h2>
           <p class="section-lead" style="margin-bottom:20px;">Good Life Lending is committed to helping real estate investors succeed. We offer reliable hard money loans throughout {place}, providing the flexibility traditional banks don't offer.</p>
-          <p class="section-lead" style="margin-bottom:20px;">Josh has been investing in real estate since 2008, so we understand the urgency behind a good deal — and we’re here to help you act quickly.</p>
+          <p class="section-lead" style="margin-bottom:20px;">Josh has been investing in real estate since 2008, so we understand the urgency behind a good deal, and we’re here to help you act quickly.</p>
           <p class="section-lead" style="margin-bottom:20px;">Whether you're targeting Omaha, Lincoln, Grand Island, or any surrounding Nebraska markets, we fund deals fast, with a simple approval process and no unnecessary hurdles.</p>
           <p><strong>Or call us: <a href="tel:+14027707950">(402) 770-7950</a></strong></p>
         </div>
@@ -374,11 +374,11 @@ def market_page(slug, place, seo):
           <h2 class="section-title">Why Investors Choose Good Life Lending</h2>
           <ul class="checklist">
             <li>Fast approvals &amp; fast closings</li>
-            <li>Straight answers about your deal — no runaround</li>
+            <li>Straight answers about your deal, no runaround</li>
             <li>A simple, 100% digital process</li>
             <li>Flexible underwriting that focuses on the property and your strategy</li>
             <li>Local expertise in {place} real estate markets</li>
-            <li>Direct private lenders — no brokers, no delays</li>
+            <li>Direct private lenders: no brokers, no delays</li>
           </ul>
           <p class="section-lead" style="margin-bottom:0;"><strong>When you need a {place} hard money lender who can deliver, Good Life Lending is the partner you can count on.</strong></p>
           <a href="#quote" class="btn btn-gold mt-24">Get An Instant Quote</a>
@@ -414,7 +414,7 @@ def market_page(slug, place, seo):
             <li>Real cash in the deal</li>
             <li>A solid property with numbers that make sense</li>
             <li>Your rehab plan and budget</li>
-            <li>Your experience — or your plan, if this is your first flip</li>
+            <li>Your experience, or your plan if this is your first flip</li>
           </ul>
           <p style="color:var(--muted);">Tell us about your deal and we'll give you a straight answer, and clear terms, quickly.</p>
         </div>
@@ -430,9 +430,9 @@ def market_page(slug, place, seo):
           <li>Get a quick quote</li>
           <li>Complete a quick underwriting review</li>
           <li>Sign final documents</li>
-          <li>Get funded fast — often in under a week</li>
+          <li>Get funded fast, often in under a week</li>
         </ol>
-        <p><strong>Ready to get started?</strong> No complicated approvals. No endless paperwork. Just the capital you need — when you need it.</p>
+        <p><strong>Ready to get started?</strong> No complicated approvals. No endless paperwork. Just the capital you need, when you need it.</p>
         <a href="#quote" class="btn btn-gold mt-24">Get an Instant Quote Today</a>
       </div>
     </section>
@@ -461,7 +461,7 @@ def market_page(slug, place, seo):
             <li>Local market insights</li>
             <li>Dedicated support from application to final sale</li>
           </ul>
-          <p style="color:var(--muted);">We’re not just lenders — we’re long-term partners in your investment journey.</p>
+          <p style="color:var(--muted);">We’re not just lenders. We’re long-term partners in your investment journey.</p>
         </div>
         <div>
           <h2 class="section-title">Areas We Serve in Nebraska</h2>
@@ -487,7 +487,7 @@ def market_page(slug, place, seo):
     <section id="cta">
       <div class="container">
         <h2>Apply for a {place} Hard Money Loan Today</h2>
-        <p>Ready to secure fast funding for your next fix &amp; flip project? Good Life Lending makes it easy to get approved and get funded — quickly. Get started today and we’ll follow up within one business day.</p>
+        <p>Ready to secure fast funding for your next fix &amp; flip project? Good Life Lending makes it easy to get approved and get funded quickly. Get started today and we’ll follow up within one business day.</p>
         <div class="cta-group">
           <a href="#quote" class="btn btn-gold">Get Quote Now</a>
           <a href="{APPLY_URL}" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Apply for Your {place} Hard Money Loan</a>
@@ -501,7 +501,7 @@ def market_page(slug, place, seo):
         <div>
           <p class="section-eyebrow">Here to Help</p>
           <h2 class="section-title">Josh Nix - Founder</h2>
-          <p style="color:var(--muted);margin-bottom:16px;">At GoodLife Lending, we know real estate investing moves fast—and so do we. Whether you’re flipping, building, or scaling your portfolio, our team is here to make sure funding isn’t the holdup. With local roots, common-sense underwriting, and a commitment to quick answers, we’re here to help you get deals done and grow your business with confidence.</p>
+          <p style="color:var(--muted);margin-bottom:16px;">At GoodLife Lending, we know real estate investing moves fast, and so do we. Whether you’re flipping, building, or scaling your portfolio, our team is here to make sure funding isn’t the holdup. With local roots, common-sense underwriting, and a commitment to quick answers, we’re here to help you get deals done and grow your business with confidence.</p>
           <p><strong>Email:</strong> <a href="mailto:{EMAIL}">{EMAIL}</a><br /><strong>Address:</strong> PO Box 5206 Lincoln, NE 68505<br /><strong>Phone:</strong> <a href="tel:+14027707950">{PHONE}</a></p>
           <a href="{APPLY_URL}" class="btn btn-primary mt-24">Apply Now</a>
         </div>
@@ -515,7 +515,7 @@ def market_page(slug, place, seo):
     if ld is None:  # the GHL Nebraska page had no schema; reuse the city schema scoped to Nebraska
         txt = json.dumps(json.loads(read("seo.json"))["omaha-hard-money-lenders"]["ld"], ensure_ascii=False)
         for old, new in [("omaha-hard-money-lenders", slug), ("Hard Money Lenders Omaha, NE", "Hard Money Lenders Nebraska"),
-                         ("Hard Money Lenders Omaha", "Hard Money Lenders Nebraska"), ("— Omaha", "— Nebraska"),
+                         ("Hard Money Lenders Omaha", "Hard Money Lenders Nebraska"),
                          ("in Omaha", "in Nebraska"), ("the Omaha investment", "the Nebraska investment"),
                          ('"areaServed": "Omaha, NE"', '"areaServed": "Nebraska"'), ("across Omaha and Nebraska", "across Nebraska")]:
             txt = txt.replace(old, new)
@@ -548,20 +548,20 @@ def build_pages():
                        ("grand-island-hard-money-lenders", "Grand Island"), ("kearney-hard-money-lenders", "Kearney")]:
         market_page(slug, city, seo[slug])
 
-    # /thank-you — the Instant Quote survey redirects here (hard-coded in GHL)
+    # /thank-you: the Instant Quote survey redirects here (hard-coded in GHL)
     simple_page("thank-you", "Thank You", "", "Thank You", f"""        <div class="prose">
           <p>Thank you for submitting your information for a hard money loan quote.</p>
           <p>One of our team representatives will be in contact with you soon.</p>
           <p class="mt-24"><a href="{APPLY_URL}" class="btn btn-gold">Start Your Full Application</a> &nbsp; <a href="/" class="btn btn-outline">Back to Home</a></p>
         </div>""", noindex=True)
 
-    # /apply — GHL "Loan Request" form (the Borrower Scorecard links here)
+    # /apply: GHL "Loan Request" form (the Borrower Scorecard links here)
     simple_page("apply", "Apply for a Hard Money Loan | Good Life Lending", "Request a fix-and-flip or hard money loan from Good Life Lending. Share the property, purchase price, loan amount and closing date.", "Apply Now",
                 f"""        <div class="card" style="max-width:760px;margin:0 auto;">
           {LOAN_FORM_EMBED}
         </div>""", embeds=True)
 
-    # /pre-qualify — Borrower Scorecard, verbatim from the GHL custom code element
+    # /pre-qualify: Borrower Scorecard, verbatim from the GHL custom code element
     simple_page("pre-qualify", "Do You Qualify for a Hard Money Loan? | Good Life Lending",
                 "Take the 60-second Good Life Lending Borrower Scorecard and see how you stack up.",
                 "Do You Qualify?", read("scorecard.html").replace('<meta charset="UTF-8">\n', ""), eyebrow="60-Second Check")
@@ -602,7 +602,7 @@ def build_pages():
 
 
 # ---------------------------------------------------------------------------
-# Legal copy — verbatim from the live GHL pages (do not edit casually: the SMS
+# Legal copy: verbatim from the live GHL pages (do not edit casually: the SMS
 # consent language on the forms points to these for A2P/10DLC compliance)
 # ---------------------------------------------------------------------------
 PRIVACY = f"""        <div class="prose">
@@ -652,7 +652,7 @@ PRIVACY = f"""        <div class="prose">
 TERMS = """        <div class="prose">
           <p class="meta">Effective Date: September 8, 2025</p>
           <h2>1. Introduction</h2>
-          <p>Welcome to Good Life Lending (“we,” “us,” or “our”). By accessing or using our website at <a href="https://goodlife-lending.com">goodlife-lending.com</a> (“Site”), you agree to be bound by these Terms &amp; Conditions (“Terms”). We offer financing solutions—especially designed for fix-and-flip real estate investors—with quick decisions and simple paperwork.</p>
+          <p>Welcome to Good Life Lending (“we,” “us,” or “our”). By accessing or using our website at <a href="https://goodlife-lending.com">goodlife-lending.com</a> (“Site”), you agree to be bound by these Terms &amp; Conditions (“Terms”). We offer financing solutions, especially designed for fix-and-flip real estate investors, with quick decisions and simple paperwork.</p>
           <h2>2. Eligibility</h2>
           <p>Use of the Site is restricted to individuals or business entities that are legally capable of entering into contracts. You affirm that you are at least 18 years old (or the applicable age in your jurisdiction) and meet any other eligibility criteria we may set.</p>
           <h2>3. Use of the Site</h2>
@@ -662,23 +662,23 @@ TERMS = """        <div class="prose">
           <h2>4. Loan Applications &amp; Financing Terms</h2>
           <p>Loan decisions and terms (such as interest rates, repayment schedule, fees) are determined case-by-case and at our sole discretion.</p>
           <p>While we strive to keep things fast and simple with minimal bureaucracy, all final loan agreements must be signed and are legally binding.</p>
-          <p>For transparency and fairness, our financing complies with applicable consumer protection laws like the Truth in Lending Act (TILA), which mandates clear disclosure of credit terms, APR, and borrower rights—including, where applicable, the right to rescind certain loans within three business days.</p>
+          <p>For transparency and fairness, our financing complies with applicable consumer protection laws like the Truth in Lending Act (TILA), which mandates clear disclosure of credit terms, APR, and borrower rights, including, where applicable, the right to rescind certain loans within three business days.</p>
           <p>We do not engage in predatory lending practices. Fees and pricing are justified by risk-based evaluation, and we do not mislead or exploit borrowers.</p>
           <h2>5. Disclosures &amp; Reserve Rights</h2>
-          <p>We retain the right to change loan application protocols, documentation requirements, underwriting criteria, or interest rates at our discretion. Check back—just like you’d inspect a job site—before applying.</p>
+          <p>We retain the right to change loan application protocols, documentation requirements, underwriting criteria, or interest rates at our discretion. Check back, just like you’d inspect a job site, before applying.</p>
           <p>You shall receive any required disclosures at or before the time of application or loan consummation.</p>
           <h2>6. Intellectual Property</h2>
-          <p>All content on the Site—text, graphics, logos, images, software—is owned by or licensed to Good Life Lending and protected under U.S. and international intellectual property laws.</p>
+          <p>All content on the Site (text, graphics, logos, images, software) is owned by or licensed to Good Life Lending and protected under U.S. and international intellectual property laws.</p>
           <p>You may not reproduce, distribute, or create derivative works without our express permission.</p>
           <h2>7. Limitation of Liability</h2>
-          <p>Our Site and services are provided “as is.” We disclaim all warranties—whether express or implied—related to functionality, accuracy, or uptime. If your site times out, you'll still have to come back (no warranties there either).</p>
+          <p>Our Site and services are provided “as is.” We disclaim all warranties, whether express or implied, related to functionality, accuracy, or uptime. If your site times out, you'll still have to come back (no warranties there either).</p>
           <p>To the fullest extent permitted by law, in no event will we be liable for any direct, indirect, incidental, punitive, or consequential damages arising out of or in connection with your use of the Site or your borrowing decisions.</p>
           <h2>8. Indemnification</h2>
           <p>You agree to indemnify, defend, and hold harmless Good Life Lending and its affiliates, officers, and employees from any claims, damages, liabilities, or expenses (including legal costs) arising from your violation of these Terms or your misuse of the Site.</p>
           <h2>9. Modifications</h2>
-          <p>We may revise or update these Terms at any time, and such changes are effective immediately upon posting. Continued use of the Site after changes constitutes your acceptance—so check in now and then, right alongside your tool belt.</p>
+          <p>We may revise or update these Terms at any time, and such changes are effective immediately upon posting. Continued use of the Site after changes constitutes your acceptance, so check in now and then, right alongside your tool belt.</p>
           <h2>10. Governing Law &amp; Jurisdiction</h2>
-          <p>These Terms are governed by Nebraska law, without respect to conflict of laws principles. Any legal disputes will be resolved in the state or federal courts located in Nebraska—preferably in Lincoln, where craftsmanship and lending align.</p>
+          <p>These Terms are governed by Nebraska law, without respect to conflict of laws principles. Any legal disputes will be resolved in the state or federal courts located in Nebraska, preferably in Lincoln, where craftsmanship and lending align.</p>
           <h2>11. Miscellaneous</h2>
           <p>Severability: If a provision is deemed invalid, the remaining provisions remain in full force.</p>
           <p>Waiver: No waiver of any breach of these Terms shall be deemed a waiver of any subsequent breach.</p>
