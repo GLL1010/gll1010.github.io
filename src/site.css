@@ -968,3 +968,8 @@
       #why-gll .diff-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) { .hero-card-head span { display: none; } }
+    /* hero deal snapshot */
+    .tl-val { font-weight: 800; color: var(--ink); white-space: nowrap; }
+    .deal-sold { background: #E7F6EC; color: #1E7A3C !important; font-size: 11px !important; font-weight: 800 !important; text-transform: uppercase; letter-spacing: 1px; padding: 3px 8px; border-radius: 99px; }
+    .deal-foot { font-size: 11.5px; color: var(--muted); font-weight: 600; margin: 4px 0 10px; line-height: 1.5; }
+    @media (max-width: 480px) { .hero-card-head span.deal-sold { display: inline-block; } }
