@@ -5,6 +5,10 @@ Run:  python3 src/build.py
 Edit page content here or in src/*.html, then rebuild and commit docs/.
 """
 import json, os, re, sys, shutil, html as H
+GOOGLE_REVIEWS_URL = "https://www.google.com/maps?cid=6267518184555107369"
+GOOGLE_RATING, GOOGLE_REVIEW_COUNT = "4.9", 100
+RATING_LINE = (f'<p class="rating-line"><span class="stars" aria-hidden="true">★★★★★</span> <strong>{GOOGLE_RATING}</strong> '
+               f'from <a href="{GOOGLE_REVIEWS_URL}" target="_blank" rel="noopener">{GOOGLE_REVIEW_COUNT} Google reviews</a></p>')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from city_copy import CITY_COPY
 
@@ -167,7 +171,8 @@ FOOTER = f"""  <footer role="contentinfo">
           <p class="footer-heading">Company</p>
           <ul>
             <li><a href="/#areas">Where We Lend</a></li>
-            <li><a href="/#values">Our Values</a></li>
+            <li><a href="/recently-funded">Recently Funded</a></li>
+            <li><a href="/nebraska-fix-and-flip-loan-guide">Fix &amp; Flip Loan Guide</a></li>
             <li><a href="/#faq">FAQ</a></li>
             <li><a href="/#contact">Contact</a></li>
           </ul>
@@ -179,7 +184,7 @@ FOOTER = f"""  <footer role="contentinfo">
             <li><a href="/#contact">Get an Instant Quote</a></li>
             <li><a href="/pre-qualify">Do You Qualify?</a></li>
             <li><a href="{POF_URL}">Proof of Funds Letter</a></li>
-            <li><a href="{PORTAL_URL}">Borrower/Investor Portal</a></li>
+            <li><a href="/portal-login">Portal Login</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -334,7 +339,7 @@ def lending_map_section():
           <p class="map-note">Funded loans from our records, updated {H.escape(data["updated"])}. Towns only, never borrower addresses.</p>
         </div>
         <ul class="areas map-links">
-          <li><a href="/hard-money-lenders-nebraska">Nebraska Hard Money Loans</a></li>
+          <li><a href="/hard-money-lenders-nebraska">Nebraska Fix &amp; Flip Loans</a></li>
           <li><a href="/omaha-hard-money-lenders">Omaha Hard Money Lenders</a></li>
           <li><a href="/lincoln-hard-money-lenders">Lincoln Hard Money Lenders</a></li>
           <li><a href="/grand-island-hard-money-lenders">Grand Island Hard Money Lenders</a></li>
@@ -353,7 +358,9 @@ def build_home():
     body = (body.replace("{{APPLY_URL}}", APPLY_URL)
                 .replace("{{POF_URL}}", POF_URL)
                 .replace("{{SURVEY_EMBED}}", DEFERRED_SURVEY)
-                .replace("{{LENDING_MAP}}", lending_map_section()))
+                .replace("{{LENDING_MAP}}", lending_map_section())
+                .replace("{{RATING_LINE}}", RATING_LINE)
+                .replace("{{GOOGLE_REVIEWS_URL}}", GOOGLE_REVIEWS_URL))
     schema = json.loads(read("home-schema.json"))
     faqs = re.findall(r'<details class="faq-item"><summary><h3>(.*?)</h3></summary><p>(.*?)</p></details>', body, re.S)
     for node in schema["@graph"]:
@@ -367,7 +374,7 @@ def build_home():
                                    "acceptedAnswer": {"@type": "Answer", "text": H.unescape(" ".join(a.split()))}}
                                   for q, a in faqs]
     write("index.html", page(
-        "", "Nebraska Hard Money Lender & Fix and Flip Loans | Good Life Lending",
+        "", "Nebraska Hard Money Lender | Lincoln & Omaha | Good Life Lending",
         "Direct Nebraska hard money lender. Fix-and-flip, bridge and rental loans in Omaha, Lincoln and statewide, funded in as little as 5 days.",
         body, ld=schema, embeds=False,
         og_title="Good Life Lending | Hard Money Loans That Close in as Little as 5 Days",
@@ -404,7 +411,7 @@ def market_page(slug, place, seo):
     body = f"""  <header class="page-hero">
     <div class="container">
       <p class="hero-eyebrow">Fix and Flip Loan Experts</p>
-      <h1>Hard Money Lenders {"Nebraska" if place == "Nebraska" else place}</h1>
+      <h1>{"Nebraska Fix &amp; Flip Loans" if place == "Nebraska" else "Hard Money Lenders " + place}</h1>
       <p>{e(cc["intro"])}</p>
     </div>
   </header>
@@ -450,6 +457,7 @@ def market_page(slug, place, seo):
       <div class="container">
         <p class="section-eyebrow">Reviews</p>
         <h2 class="section-title">What Investors Say</h2>
+        {RATING_LINE}
         <div class="review-grid">
 {reviews}
         </div>
@@ -598,7 +606,7 @@ def market_page(slug, place, seo):
   </main>"""
     crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{DOMAIN}/"},
-        {"@type": "ListItem", "position": 2, "name": f"Hard Money Lenders {place}", "item": f"{DOMAIN}/{slug}"}]}
+        {"@type": "ListItem", "position": 2, "name": ("Nebraska Fix & Flip Loans" if place == "Nebraska" else f"Hard Money Lenders {place}"), "item": f"{DOMAIN}/{slug}"}]}
     ld = seo["ld"]
     if ld is None:  # the GHL Nebraska page had no schema; reuse the city schema scoped to Nebraska
         txt = json.dumps(json.loads(read("seo.json"))["omaha-hard-money-lenders"]["ld"], ensure_ascii=False)
@@ -702,6 +710,7 @@ def build_pages():
     urls = ["", "hard-money-lenders-nebraska", "omaha-hard-money-lenders", "lincoln-hard-money-lenders",
             "grand-island-hard-money-lenders", "kearney-hard-money-lenders", "columbus-hard-money-lenders",
             "norfolk-hard-money-lenders", "beatrice-hard-money-lenders", "pre-qualify", "apply",
+            "nebraska-fix-and-flip-loan-guide", "recently-funded", "portal-login",
             "privacy-policy", "terms", "eula"]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"  <url><loc>{DOMAIN}/{u}</loc><lastmod>{LASTMOD}</lastmod></url>\n" for u in urls) + "</urlset>\n")
@@ -823,4 +832,7 @@ if __name__ == "__main__":
     shutil.copy(os.path.join(SRC, "site.css"), os.path.join(OUT, "assets", "site.css"))
     build_home()
     build_pages()
+    import extra_pages
+    extra_pages.build_extra({"page": page, "write": write, "DOMAIN": DOMAIN, "APPLY_URL": APPLY_URL,
+                             "POF_URL": POF_URL, "PORTAL_URL": PORTAL_URL, "EMAIL": EMAIL})
     print("Built:", sorted(f for f in os.listdir(OUT) if f.endswith(".html")))

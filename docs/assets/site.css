@@ -1029,3 +1029,32 @@
     #hero .hero-stat-number { color: #fff; }
     #hero .hero-stat-label { color: rgba(255, 255, 255, 0.7); }
     #hero .hero-stat { border-left-color: var(--orange); }
+
+    /* ===== GUIDE, FUNDED DEALS, RATINGS ===== */
+    .rating-line { font-size: 15px; color: var(--muted); margin: -4px 0 8px; }
+    .rating-line strong { color: var(--ink); }
+    .rating-line a { color: var(--navy); font-weight: 700; text-decoration: underline; }
+    .rating-line .stars { font-size: 16px; margin: 0 4px 0 0; }
+    .hero-stat-link { text-decoration: none !important; }
+    .hero-stat-link:hover .hero-stat-label { text-decoration: underline; }
+    .deal-more { display: inline-block; font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+
+    .guide { display: grid; grid-template-columns: 230px 1fr; gap: 48px; align-items: start; }
+    .guide-toc { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 10px; background: var(--hero-bg); border-radius: 16px; padding: 22px; font-size: 14px; }
+    .guide-toc strong { font-size: 12px; text-transform: uppercase; letter-spacing: 1.4px; color: var(--orange-text); }
+    .guide-toc a { color: var(--navy); font-weight: 600; }
+    .guide-body { max-width: 760px; }
+    .guide-body h2 { font-size: 26px; margin: 40px 0 12px; scroll-margin-top: 100px; }
+    .guide-body h2:first-child { margin-top: 0; }
+    .guide-body li strong { color: var(--ink); }
+    .guide-body .steps-list li { color: var(--ink); }
+
+    .deal-snap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; }
+    .deal-snap { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 20px 20px 8px; box-shadow: 0 10px 28px rgba(27, 33, 64, 0.07); }
+    .deal-snap-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .deal-snap-head strong { font-size: 17px; color: var(--ink); }
+
+    @media (max-width: 900px) {
+      .guide { grid-template-columns: 1fr; gap: 24px; }
+      .guide-toc { position: static; }
+    }

@@ -1,0 +1,14 @@
+{
+  "_note": "Sold fix-and-flip deals from Lendr (completed loans with a recorded Sale Price). Purchase = Lendr purchase price (current_value on purchase loans); renovation = larger of rehab budget and rehab holdback; sold = Sale Price custom field. Towns only: never add borrower names or addresses. Pulled 2026-11-12.",
+  "deals": [
+    {"loan": 4508, "town": "Norfolk", "purchase": 117000, "renovation": 16500, "sale": 210000, "funded": "2026-05-11", "sold": "2026-10-02"},
+    {"loan": 4503, "town": "Lincoln", "purchase": 412000, "renovation": 16000, "sale": 485000, "funded": "2026-05-12", "sold": "2026-08-03"},
+    {"loan": 3262, "town": "York", "purchase": 61000, "renovation": 55000, "sale": 155000, "funded": "2025-11-03", "sold": "2026-05-22"},
+    {"loan": 3838, "town": "Bellevue", "purchase": 165000, "renovation": 45000, "sale": 259000, "funded": "2025-11-26", "sold": "2026-05-08"},
+    {"loan": 4453, "town": "Lincoln", "purchase": 185000, "renovation": 75000, "sale": 298000, "funded": "2025-12-15", "sold": "2026-04-27"},
+    {"loan": 4473, "town": "Lincoln", "purchase": 232500, "renovation": 68000, "sale": 390000, "funded": "2026-02-09", "sold": "2026-04-24"},
+    {"loan": 3140, "town": "Beatrice", "purchase": 200000, "renovation": 60000, "sale": 282000, "funded": "2025-10-10", "sold": "2026-03-16"},
+    {"loan": 3150, "town": "Lincoln", "purchase": 180000, "renovation": 45000, "sale": 247500, "funded": "2025-10-08", "sold": "2026-02-24"},
+    {"loan": 3024, "town": "Lincoln", "purchase": 98900, "renovation": 100000, "sale": 320000, "funded": "2025-10-03", "sold": "2026-02-13"}
+  ]
+}

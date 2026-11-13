@@ -1,7 +1,7 @@
 {
   "hard-money-lenders-nebraska": {
-    "title": "Hard Money Lenders Nebraska | Good Life Lending",
-    "description": "Good Life Lending is a direct, Nebraska-based hard money lender funding fix & flip and rental deals statewide, in as little as 5 days from approval.",
+    "title": "Nebraska Fix and Flip Loans | Good Life Lending",
+    "description": "Fix and flip loans across Nebraska from a direct, Lincoln-based hard money lender. Purchase and rehab funding in as little as 5 days from approval.",
     "ld": null
   },
   "omaha-hard-money-lenders": {
@@ -40,8 +40,9 @@
           "description": "Direct hard money lender providing fix & flip and investment property financing across Omaha and Nebraska with fast approvals and character-based underwriting.",
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3"
+            "ratingValue": "4.9",
+            "reviewCount": "100",
+            "bestRating": "5"
           },
           "review": [
             {
@@ -155,8 +156,9 @@
           "description": "Direct hard money lender providing fix & flip and investment property financing across Lincoln and Nebraska with fast approvals and character-based underwriting.",
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3"
+            "ratingValue": "4.9",
+            "reviewCount": "100",
+            "bestRating": "5"
           },
           "review": [
             {
@@ -269,8 +271,9 @@
           "description": "Direct hard money lender providing fix & flip and investment property financing across Grand Island and Nebraska with fast approvals and flexible underwriting.",
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3"
+            "ratingValue": "4.9",
+            "reviewCount": "100",
+            "bestRating": "5"
           },
           "review": [
             {
@@ -384,8 +387,9 @@
           "description": "Direct hard money lender providing fix & flip and investment property financing across Kearney and Nebraska with fast approvals and character-based underwriting.",
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3"
+            "ratingValue": "4.9",
+            "reviewCount": "100",
+            "bestRating": "5"
           },
           "review": [
             {
