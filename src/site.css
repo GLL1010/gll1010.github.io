@@ -973,3 +973,17 @@
     .deal-sold { background: #E7F6EC; color: #1E7A3C !important; font-size: 11px !important; font-weight: 800 !important; text-transform: uppercase; letter-spacing: 1px; padding: 3px 8px; border-radius: 99px; }
     .deal-foot { font-size: 11.5px; color: var(--muted); font-weight: 600; margin: 4px 0 10px; line-height: 1.5; }
     @media (max-width: 480px) { .hero-card-head span.deal-sold { display: inline-block; } }
+
+    /* tighter frame around the GHL survey (survey has its own padding) */
+    .contact-form { padding: 20px 16px 16px; }
+    #quote .card { padding: 16px 12px; }
+    @media (max-width: 768px) {
+      .contact-form, #quote .card { padding: 10px 4px 12px; }
+      .contact-form .form-disclaimer { padding: 0 12px; }
+    }
+
+    /* darker hero for more contrast */
+    :root { --hero-bg-strong: #D3DCEC; }
+    #hero, .page-hero { background: linear-gradient(160deg, #DEE5F2 0%, var(--hero-bg-strong) 100%); }
+    #hero .hero-sub, .page-hero p { color: #4A5168; }
+    .hero-dash { border-top-color: rgba(51, 65, 117, 0.45); }
