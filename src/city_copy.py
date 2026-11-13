@@ -113,4 +113,67 @@ CITY_COPY = {
             ("How do I get started?", "Fill out the quick quote form on this page or start a full application. We'll follow up within one business day."),
         ],
     },
+    "columbus-hard-money-lenders": {
+        "intro": "Columbus investors work on local relationships, not out-of-state lenders. Good Life Lending has funded several deals in Columbus, including for repeat borrowers, with funding in as little as 5 days from approval.",
+        "heading": "Investing in Columbus Real Estate",
+        "paragraphs": [
+            "Columbus sits where the Loup and Platte rivers meet, with a strong manufacturing job base and a Central Community College campus. Steady employment keeps demand up for solid, affordable homes, from starter houses near downtown to family homes on the edges of town.",
+            "The deals we see here are a mix: older homes that need updating, quick purchases where a seller wants a fast close, and smaller properties investors hold as rentals. The numbers tend to work when you buy right and keep the rehab focused.",
+            "We've worked with the same Columbus investors on more than one deal, and that's the goal: a lender you can call again when the next property comes up.",
+        ],
+        "areas_heading": "Columbus-area towns we lend in",
+        "areas": ["Columbus", "Schuyler", "David City", "Humphrey", "Platte Center", "Genoa", "Albion", "Fullerton", "Shelby", "Osceola"],
+        "fits": [
+            "Older homes near downtown that need updating",
+            "Buy-and-hold rentals and townhomes",
+            "Quick purchases where a fast close wins the deal",
+        ],
+        "faqs": [
+            ("Do you lend in Columbus and Platte County?", "Yes. We've funded several deals in Columbus and lend throughout Platte County and the surrounding area, including Schuyler, David City, Humphrey and Albion."),
+            ("Do you lend on townhomes and condos in Columbus?", "We look at them case by case. What matters is the property, the numbers and your plan for it. Tell us about the deal and we'll give you a straight answer."),
+            ("Do I need to come to Lincoln to close?", "No. Our process is 100% digital, so it works the same in Columbus as it does in Lincoln."),
+        ],
+    },
+    "norfolk-hard-money-lenders": {
+        "intro": "Norfolk is the hub of northeast Nebraska, and investors here deserve a lender who doesn't treat it like an afterthought. Good Life Lending funds fix-and-flip and small multifamily deals in Norfolk, in as little as 5 days from approval.",
+        "heading": "Investing in Norfolk Real Estate",
+        "paragraphs": [
+            "Norfolk draws shoppers, patients and workers from across northeast Nebraska. Healthcare, manufacturing and Northeast Community College keep demand steady for rentals and move-in-ready homes.",
+            "A lot of the opportunity is in older housing near downtown and along the Elkhorn River, including duplexes and small multifamily buildings that need real work. Those deals can make sense for investors who want cash flow, as long as the rehab budget is realistic.",
+            "We've funded small multifamily rehabs in Norfolk, so we understand what it takes to turn a tired 2 to 4 unit property into a solid rental.",
+        ],
+        "areas_heading": "Northeast Nebraska towns we lend in",
+        "areas": ["Norfolk", "Madison", "Battle Creek", "Pierce", "Stanton", "Wayne", "Plainview", "Tilden", "Hoskins", "Hadar"],
+        "fits": [
+            "Duplexes and small multifamily (2 to 4 units)",
+            "Older homes near downtown ready for a rehab",
+            "Rentals you plan to refinance once the work is done",
+        ],
+        "faqs": [
+            ("Do you finance duplexes and small multifamily in Norfolk?", "Yes. We've funded small multifamily rehabs in Norfolk. We look at the property, the rent numbers, your rehab plan and the cash you're bringing."),
+            ("Do you lend outside Norfolk?", "Yes. We lend throughout northeast Nebraska, including Madison, Wayne, Pierce, Stanton and Plainview."),
+            ("What do I need to qualify?", "Decent credit, real cash in the deal and a solid opportunity. We weigh the deal and the person behind it together."),
+        ],
+    },
+    "beatrice-hard-money-lenders": {
+        "intro": "Beatrice sits about 40 miles south of Lincoln: close enough that plenty of Lincoln investors buy here, and far enough that prices stay friendlier. Good Life Lending has funded several Beatrice deals, with funding in as little as 5 days from approval.",
+        "heading": "Investing in Beatrice Real Estate",
+        "paragraphs": [
+            "Beatrice is the Gage County seat, along the Big Blue River, with steady demand from local employers, Southeast Community College and families who want small-town prices within reach of Lincoln.",
+            "The housing stock leans older, which is where fix-and-flip money fits: homes with good bones that need updated kitchens, baths, mechanicals and curb appeal. Buy right, keep the rehab tight and the numbers can work.",
+            "Because we're based in Lincoln, Beatrice is close to home for us. We know the area, and we move fast when a good deal comes up.",
+        ],
+        "areas_heading": "Southeast Nebraska towns we lend in",
+        "areas": ["Beatrice", "Wymore", "Blue Springs", "Adams", "Cortland", "Clatonia", "Filley", "Fairbury", "Tecumseh", "Crete"],
+        "fits": [
+            "Older homes ready for a full rehab",
+            "Rentals for local workers and families",
+            "Purchases where a fast close wins the deal",
+        ],
+        "faqs": [
+            ("Do you lend in Beatrice and Gage County?", "Yes. We've funded several deals in Beatrice and lend throughout southeast Nebraska, including Wymore, Fairbury and Tecumseh."),
+            ("I live in Lincoln. Can I flip a house in Beatrice?", "Absolutely. Plenty of Lincoln investors buy in Beatrice. We look at the property, your rehab plan and your numbers the same way wherever you live."),
+            ("How fast can you fund a Beatrice deal?", "As little as 5 days from approval to funding. Title and appraisal timing can move that a little, but we work hard not to be the holdup."),
+        ],
+    },
 }

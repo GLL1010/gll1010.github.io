@@ -190,6 +190,9 @@ FOOTER = f"""  <footer role="contentinfo">
             <li><a href="/lincoln-hard-money-lenders">Lincoln</a></li>
             <li><a href="/grand-island-hard-money-lenders">Grand Island</a></li>
             <li><a href="/kearney-hard-money-lenders">Kearney</a></li>
+            <li><a href="/columbus-hard-money-lenders">Columbus</a></li>
+            <li><a href="/norfolk-hard-money-lenders">Norfolk</a></li>
+            <li><a href="/beatrice-hard-money-lenders">Beatrice</a></li>
           </ul>
         </div>
       </div>
@@ -336,6 +339,9 @@ def lending_map_section():
           <li><a href="/lincoln-hard-money-lenders">Lincoln Hard Money Lenders</a></li>
           <li><a href="/grand-island-hard-money-lenders">Grand Island Hard Money Lenders</a></li>
           <li><a href="/kearney-hard-money-lenders">Kearney Hard Money Lenders</a></li>
+          <li><a href="/columbus-hard-money-lenders">Columbus Hard Money Lenders</a></li>
+          <li><a href="/norfolk-hard-money-lenders">Norfolk Hard Money Lenders</a></li>
+          <li><a href="/beatrice-hard-money-lenders">Beatrice Hard Money Lenders</a></li>
         </ul>
       </div>
     </section>
@@ -376,7 +382,8 @@ REVIEWS = [
 
 AREAS = [("Omaha", "/omaha-hard-money-lenders"), ("Lincoln", "/lincoln-hard-money-lenders"), ("Bellevue", None),
          ("Grand Island", "/grand-island-hard-money-lenders"), ("Kearney", "/kearney-hard-money-lenders"),
-         ("Fremont", None), ("Hastings", None), ("Norfolk", None), ("All surrounding areas", None)]
+         ("Columbus", "/columbus-hard-money-lenders"), ("Norfolk", "/norfolk-hard-money-lenders"),
+         ("Beatrice", "/beatrice-hard-money-lenders"), ("Fremont", None), ("Hastings", None), ("All surrounding areas", None)]
 
 
 def market_page(slug, place, seo):
@@ -604,6 +611,21 @@ def market_page(slug, place, seo):
     write(f"{slug}.html", page(slug, seo["title"], seo["description"], body, ld=[ld, crumbs, faq_ld], embeds=True))
 
 
+NEW_CITIES = [("columbus-hard-money-lenders", "Columbus"), ("norfolk-hard-money-lenders", "Norfolk"),
+              ("beatrice-hard-money-lenders", "Beatrice")]
+
+
+def city_ld(slug, city):
+    """Structured data for a new city page, cloned from the Omaha page's schema."""
+    txt = json.dumps(json.loads(read("seo.json"))["omaha-hard-money-lenders"]["ld"], ensure_ascii=False)
+    for old, new in [("omaha-hard-money-lenders", slug), ("Hard Money Lenders Omaha, NE", f"Hard Money Lenders {city}, NE"),
+                     ("Hard Money Lenders Omaha", f"Hard Money Lenders {city}"), ("Loans in Omaha", f"Loans in {city}"),
+                     ("the Omaha investment", f"the {city} investment"), ('"areaServed": "Omaha, NE"', f'"areaServed": "{city}, NE"'),
+                     ("across Omaha and Nebraska", f"across {city} and Nebraska")]:
+        txt = txt.replace(old, new)
+    return json.loads(txt)
+
+
 def simple_page(slug, title, description, h1, inner, *, eyebrow="", embeds=False, noindex=False):
     eb = f'<p class="hero-eyebrow">{eyebrow}</p>' if eyebrow else ""
     body = f"""  <header class="page-hero">
@@ -628,6 +650,11 @@ def build_pages():
     for slug, city in [("omaha-hard-money-lenders", "Omaha"), ("lincoln-hard-money-lenders", "Lincoln"),
                        ("grand-island-hard-money-lenders", "Grand Island"), ("kearney-hard-money-lenders", "Kearney")]:
         market_page(slug, city, seo[slug])
+    for slug, city in NEW_CITIES:
+        market_page(slug, city, {
+            "title": f"Hard Money Lenders {city}, NE | Fix & Flip Loans",
+            "description": f"Looking for hard money lenders in {city}, NE? Good Life Lending funds fix & flip and rental loans fast, in as little as 5 days from approval.",
+            "ld": city_ld(slug, city)})
 
     # /thank-you: the Instant Quote survey redirects here (hard-coded in GHL)
     simple_page("thank-you", "Thank You", "", "Thank You", f"""        <div class="prose">
@@ -673,7 +700,8 @@ def build_pages():
         canonical=f"{DOMAIN}/", noindex=True))
 
     urls = ["", "hard-money-lenders-nebraska", "omaha-hard-money-lenders", "lincoln-hard-money-lenders",
-            "grand-island-hard-money-lenders", "kearney-hard-money-lenders", "pre-qualify", "apply",
+            "grand-island-hard-money-lenders", "kearney-hard-money-lenders", "columbus-hard-money-lenders",
+            "norfolk-hard-money-lenders", "beatrice-hard-money-lenders", "pre-qualify", "apply",
             "privacy-policy", "terms", "eula"]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"  <url><loc>{DOMAIN}/{u}</loc><lastmod>{LASTMOD}</lastmod></url>\n" for u in urls) + "</urlset>\n")
