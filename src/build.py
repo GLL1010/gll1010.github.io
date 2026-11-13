@@ -76,6 +76,31 @@ FORM_EMBED_JS = '<script src="https://link.msgsndr.com/js/form_embed.js"></scrip
 # Survey "Get an Instant Quote" -> triggers "Landing Page Survey Automation(Google ads)"
 SURVEY_EMBED = """<iframe src="https://api.leadconnectorhq.com/widget/survey/T2gbIv97b8rukjUzvRkV" class="ghl-embed" style="border:none;width:100%;" scrolling="no" id="T2gbIv97b8rukjUzvRkV" title="Get an Instant Quote"></iframe>"""
 
+# Homepage: the survey sits far down the page, so inject it (and GHL's
+# form_embed.js) only when the visitor scrolls near it. Don't use
+# loading="lazy" on the iframe: form_embed.js parks it off-screen until it
+# loads, so a lazy iframe never loads and the card stays blank.
+DEFERRED_SURVEY = """<div class="survey-slot" data-survey style="min-height:520px;"></div>
+<script>
+(function () {
+  var slot = document.querySelector('[data-survey]');
+  function load() {
+    if (slot.getAttribute('data-loaded')) return;
+    slot.setAttribute('data-loaded', '1');
+    slot.innerHTML = '""" + SURVEY_EMBED.replace("'", "\\'") + """';
+    var s = document.createElement('script');
+    s.src = 'https://link.msgsndr.com/js/form_embed.js';
+    document.body.appendChild(s);
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { load(); io.disconnect(); }
+    }, { rootMargin: '1500px 0px' });
+    io.observe(slot);
+  } else { load(); }
+})();
+</script>"""
+
 # Form "Loan Request" (used on /apply)
 LOAN_FORM_EMBED = """<iframe
     src="https://api.leadconnectorhq.com/widget/form/XGMTCOitb0seEcEmT0dB"
@@ -268,7 +293,7 @@ def build_home():
     body = read("home.html")
     body = (body.replace("{{APPLY_URL}}", APPLY_URL)
                 .replace("{{POF_URL}}", POF_URL)
-                .replace("{{SURVEY_EMBED}}", SURVEY_EMBED.replace("<iframe ", '<iframe loading="lazy" ', 1)))
+                .replace("{{SURVEY_EMBED}}", DEFERRED_SURVEY))
     schema = json.loads(read("home-schema.json"))
     faqs = re.findall(r'<details class="faq-item"><summary><h3>(.*?)</h3></summary><p>(.*?)</p></details>', body, re.S)
     for node in schema["@graph"]:
@@ -284,7 +309,7 @@ def build_home():
     write("index.html", page(
         "", "Nebraska Hard Money Lender & Fix and Flip Loans | Good Life Lending",
         "Direct Nebraska hard money lender. Fix-and-flip, bridge and rental loans in Omaha, Lincoln and statewide, funded in as little as 5 days.",
-        body, ld=schema, embeds=True,
+        body, ld=schema, embeds=False,
         og_title="Good Life Lending | Hard Money Loans That Close in as Little as 5 Days",
         og_description="Fast, character-based hard money lending for Nebraska real estate investors. We've been on the borrower side, and we know how to say yes to the right deals."))
 

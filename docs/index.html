@@ -689,7 +689,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p style="margin-top:24px;">Ready to apply? <a href="https://portal.goodlife-lending.com/goodlifelending/application"><strong>Start your full loan application →</strong></a><br />Need a proof of funds letter? <a href="https://portal.goodlife-lending.com/goodlifelending/proof-of-funds"><strong>Request a POF letter →</strong></a></p>
           </div>
           <div class="contact-form">
-            <iframe loading="lazy" src="https://api.leadconnectorhq.com/widget/survey/T2gbIv97b8rukjUzvRkV" class="ghl-embed" style="border:none;width:100%;" scrolling="no" id="T2gbIv97b8rukjUzvRkV" title="Get an Instant Quote"></iframe>
+            <div class="survey-slot" data-survey style="min-height:520px;"></div>
+<script>
+(function () {
+  var slot = document.querySelector('[data-survey]');
+  function load() {
+    if (slot.getAttribute('data-loaded')) return;
+    slot.setAttribute('data-loaded', '1');
+    slot.innerHTML = '<iframe src="https://api.leadconnectorhq.com/widget/survey/T2gbIv97b8rukjUzvRkV" class="ghl-embed" style="border:none;width:100%;" scrolling="no" id="T2gbIv97b8rukjUzvRkV" title="Get an Instant Quote"></iframe>';
+    var s = document.createElement('script');
+    s.src = 'https://link.msgsndr.com/js/form_embed.js';
+    document.body.appendChild(s);
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { load(); io.disconnect(); }
+    }, { rootMargin: '1500px 0px' });
+    io.observe(slot);
+  } else { load(); }
+})();
+</script>
             <p class="form-disclaimer">
               No rates are quoted via this form. We'll respond within 1 business day to schedule a conversation. Good Life Lending requires decent credit, real cash in the deal, and a solid opportunity.
             </p>
@@ -758,7 +777,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </footer>
 
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
 <script
 src="https://link.msgsndr.com/js/external-tracking.js"
 data-tracking-id="tk_0595e86fcd384fb7b19104d3b74e73a8">
