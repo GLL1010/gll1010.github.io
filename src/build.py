@@ -309,7 +309,7 @@ def lending_map_section():
         if t.get("label"):
             left = t.get("label_left")
             lx = x - r - 6 if left else x + r + 6
-            labels.append(f'<text class="ne-label" x="{lx:.1f}" y="{y + 6:.1f}" text-anchor="{"end" if left else "start"}">{H.escape(t["name"])}</text>')
+            labels.append(f'<text class="ne-label" x="{lx:.1f}" y="{y + 6:.1f}" text-anchor="{"end" if left else "start"}">{H.escape(t.get("label_text", t["name"]))}</text>')
     svg = (f'<svg class="ne-map" viewBox="{geo["viewBox"]}" role="img" aria-labelledby="ne-map-title" preserveAspectRatio="xMidYMid meet">'
            f'<title id="ne-map-title">Map of Nebraska showing the {len(towns)} communities where Good Life Lending has funded loans</title>'
            f'<path class="ne-counties" d="{geo["counties"]}"/><path class="ne-state" d="{geo["state"]}"/>'
@@ -323,7 +323,7 @@ def lending_map_section():
         <p class="section-lead center" style="margin-left:auto;margin-right:auto;">Good Life Lending is a direct private lender based in Lincoln. Every dot below is a Nebraska town where we've funded a fix-and-flip, bridge or rental loan. The bigger the dot, the more deals we've done there.</p>
         <div class="map-stats">
           <div><strong>{len(towns)}</strong><span>Nebraska communities</span></div>
-          <div><strong>Omaha to Gering</strong><span>Statewide reach</span></div>
+          <div><strong>Omaha to Scottsbluff</strong><span>Statewide reach</span></div>
         </div>
         <div class="map-card">
           {svg}

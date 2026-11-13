@@ -1,38 +1,215 @@
 {
-  "_note": "Funded GLL loans by town, from Lendr (active + completed, Nebraska only, excluding GLL-internal entries). Pulled 2026-11-12. Update counts here and rebuild. Never add street addresses.",
+  "_note": "Funded GLL loans by town, from Lendr (active + completed, Nebraska only, excluding GLL-internal entries). Pulled 2026-11-12. Update counts here and rebuild. Never add street addresses. Scottsbluff added per Josh (not in Lendr).",
   "updated": "November 2026",
   "towns": [
-    {"name": "Lincoln", "lat": 40.8136, "lon": -96.7026, "loans": 43, "label": true},
-    {"name": "Omaha", "lat": 41.2565, "lon": -95.9345, "loans": 17, "label": true, "label_left": true},
-    {"name": "Columbus", "lat": 41.4297, "lon": -97.3684, "loans": 5, "label": true},
-    {"name": "Beatrice", "lat": 40.2681, "lon": -96.7470, "loans": 5, "label": true},
-    {"name": "Norfolk", "lat": 42.0283, "lon": -97.4170, "loans": 4, "label": true},
-    {"name": "Nebraska City", "lat": 40.6767, "lon": -95.8592, "loans": 3},
-    {"name": "Pleasant Dale", "lat": 40.7911, "lon": -96.9325, "loans": 3},
-    {"name": "Elkhorn", "lat": 41.2864, "lon": -96.2364, "loans": 2},
-    {"name": "Ord", "lat": 41.6033, "lon": -98.9262, "loans": 2, "label": true},
-    {"name": "Plainview", "lat": 42.3497, "lon": -97.7867, "loans": 1},
-    {"name": "Crete", "lat": 40.6278, "lon": -96.9614, "loans": 1},
-    {"name": "Craig", "lat": 41.7853, "lon": -96.3631, "loans": 1},
-    {"name": "Bellevue", "lat": 41.1544, "lon": -95.9146, "loans": 1},
-    {"name": "Seward", "lat": 40.9069, "lon": -97.0989, "loans": 1},
-    {"name": "York", "lat": 40.8681, "lon": -97.5920, "loans": 1},
-    {"name": "Cozad", "lat": 40.8597, "lon": -99.9873, "loans": 1},
-    {"name": "Eagle", "lat": 40.8172, "lon": -96.4306, "loans": 1},
-    {"name": "Plattsmouth", "lat": 41.0114, "lon": -95.8822, "loans": 1},
-    {"name": "Tecumseh", "lat": 40.3667, "lon": -96.1961, "loans": 1},
-    {"name": "Gering", "lat": 41.8258, "lon": -103.6605, "loans": 1, "label": true},
-    {"name": "Aurora", "lat": 40.8672, "lon": -98.0040, "loans": 1},
-    {"name": "Broken Bow", "lat": 41.4019, "lon": -99.6393, "loans": 1, "label": true},
-    {"name": "Herman", "lat": 41.6739, "lon": -96.2161, "loans": 1},
-    {"name": "Blair", "lat": 41.5444, "lon": -96.1250, "loans": 1},
-    {"name": "Bertrand", "lat": 40.5264, "lon": -99.6343, "loans": 1},
-    {"name": "Brady", "lat": 41.0228, "lon": -100.3685, "loans": 1},
-    {"name": "Yutan", "lat": 41.2450, "lon": -96.3970, "loans": 1},
-    {"name": "Ames", "lat": 41.4547, "lon": -96.6283, "loans": 1},
-    {"name": "Tekamah", "lat": 41.7786, "lon": -96.2214, "loans": 1},
-    {"name": "Valley", "lat": 41.3128, "lon": -96.3461, "loans": 1},
-    {"name": "Fairbury", "lat": 40.1372, "lon": -97.1806, "loans": 1},
-    {"name": "Hickman", "lat": 40.6203, "lon": -96.6292, "loans": 1}
+    {
+      "name": "Lincoln",
+      "lat": 40.8136,
+      "lon": -96.7026,
+      "loans": 43,
+      "label": true
+    },
+    {
+      "name": "Omaha",
+      "lat": 41.2565,
+      "lon": -95.9345,
+      "loans": 17,
+      "label": true,
+      "label_left": true
+    },
+    {
+      "name": "Columbus",
+      "lat": 41.4297,
+      "lon": -97.3684,
+      "loans": 5,
+      "label": true
+    },
+    {
+      "name": "Beatrice",
+      "lat": 40.2681,
+      "lon": -96.747,
+      "loans": 5,
+      "label": true
+    },
+    {
+      "name": "Norfolk",
+      "lat": 42.0283,
+      "lon": -97.417,
+      "loans": 4,
+      "label": true
+    },
+    {
+      "name": "Nebraska City",
+      "lat": 40.6767,
+      "lon": -95.8592,
+      "loans": 3
+    },
+    {
+      "name": "Pleasant Dale",
+      "lat": 40.7911,
+      "lon": -96.9325,
+      "loans": 3
+    },
+    {
+      "name": "Elkhorn",
+      "lat": 41.2864,
+      "lon": -96.2364,
+      "loans": 2
+    },
+    {
+      "name": "Ord",
+      "lat": 41.6033,
+      "lon": -98.9262,
+      "loans": 2,
+      "label": true
+    },
+    {
+      "name": "Plainview",
+      "lat": 42.3497,
+      "lon": -97.7867,
+      "loans": 1
+    },
+    {
+      "name": "Crete",
+      "lat": 40.6278,
+      "lon": -96.9614,
+      "loans": 1
+    },
+    {
+      "name": "Craig",
+      "lat": 41.7853,
+      "lon": -96.3631,
+      "loans": 1
+    },
+    {
+      "name": "Bellevue",
+      "lat": 41.1544,
+      "lon": -95.9146,
+      "loans": 1
+    },
+    {
+      "name": "Seward",
+      "lat": 40.9069,
+      "lon": -97.0989,
+      "loans": 1
+    },
+    {
+      "name": "York",
+      "lat": 40.8681,
+      "lon": -97.592,
+      "loans": 1
+    },
+    {
+      "name": "Cozad",
+      "lat": 40.8597,
+      "lon": -99.9873,
+      "loans": 1
+    },
+    {
+      "name": "Eagle",
+      "lat": 40.8172,
+      "lon": -96.4306,
+      "loans": 1
+    },
+    {
+      "name": "Plattsmouth",
+      "lat": 41.0114,
+      "lon": -95.8822,
+      "loans": 1
+    },
+    {
+      "name": "Tecumseh",
+      "lat": 40.3667,
+      "lon": -96.1961,
+      "loans": 1
+    },
+    {
+      "name": "Gering",
+      "lat": 41.8258,
+      "lon": -103.6605,
+      "loans": 1
+    },
+    {
+      "name": "Aurora",
+      "lat": 40.8672,
+      "lon": -98.004,
+      "loans": 1
+    },
+    {
+      "name": "Broken Bow",
+      "lat": 41.4019,
+      "lon": -99.6393,
+      "loans": 1,
+      "label": true
+    },
+    {
+      "name": "Herman",
+      "lat": 41.6739,
+      "lon": -96.2161,
+      "loans": 1
+    },
+    {
+      "name": "Blair",
+      "lat": 41.5444,
+      "lon": -96.125,
+      "loans": 1
+    },
+    {
+      "name": "Bertrand",
+      "lat": 40.5264,
+      "lon": -99.6343,
+      "loans": 1
+    },
+    {
+      "name": "Brady",
+      "lat": 41.0228,
+      "lon": -100.3685,
+      "loans": 1
+    },
+    {
+      "name": "Yutan",
+      "lat": 41.245,
+      "lon": -96.397,
+      "loans": 1
+    },
+    {
+      "name": "Ames",
+      "lat": 41.4547,
+      "lon": -96.6283,
+      "loans": 1
+    },
+    {
+      "name": "Tekamah",
+      "lat": 41.7786,
+      "lon": -96.2214,
+      "loans": 1
+    },
+    {
+      "name": "Valley",
+      "lat": 41.3128,
+      "lon": -96.3461,
+      "loans": 1
+    },
+    {
+      "name": "Fairbury",
+      "lat": 40.1372,
+      "lon": -97.1806,
+      "loans": 1
+    },
+    {
+      "name": "Hickman",
+      "lat": 40.6203,
+      "lon": -96.6292,
+      "loans": 1
+    },
+    {
+      "name": "Scottsbluff",
+      "lat": 41.8666,
+      "lon": -103.6672,
+      "loans": 1,
+      "label": true,
+      "label_text": "Scottsbluff \u00b7 Gering",
+      "source": "Added per Josh 2026-11-12; not in Lendr"
+    }
   ]
 }
