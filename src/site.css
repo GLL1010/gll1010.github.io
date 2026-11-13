@@ -987,3 +987,28 @@
     #hero, .page-hero { background: linear-gradient(160deg, #DEE5F2 0%, var(--hero-bg-strong) 100%); }
     #hero .hero-sub, .page-hero p { color: #4A5168; }
     .hero-dash { border-top-color: rgba(51, 65, 117, 0.45); }
+
+    /* ===== LENDING MAP ===== */
+    #areas { background: var(--hero-bg); }
+    #areas .section-lead.center { text-align: center; margin-bottom: 28px; }
+    .map-stats { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; margin-bottom: 28px; text-align: center; }
+    .map-stats strong { display: block; font-size: 30px; font-weight: 800; color: var(--navy); line-height: 1.15; }
+    .map-stats span { font-size: 12px; font-weight: 700; color: var(--orange-text); text-transform: uppercase; letter-spacing: 1.4px; }
+    .map-card { background: #fff; border-radius: 24px; padding: 28px 28px 20px; box-shadow: 0 18px 44px rgba(27, 33, 64, 0.1); }
+    .ne-map { width: 100%; height: auto; display: block; }
+    .ne-counties { fill: #F3F5FA; stroke: #D6DCEA; stroke-width: 1; }
+    .ne-state { fill: none; stroke: var(--navy); stroke-width: 2.5; stroke-linejoin: round; }
+    .ne-dot { fill: var(--orange); fill-opacity: 0.82; stroke: #fff; stroke-width: 2; transition: fill-opacity 0.15s; }
+    .ne-dot:hover { fill-opacity: 1; stroke: var(--navy); }
+    .ne-label { font-family: var(--sans); font-size: 19px; font-weight: 800; fill: var(--navy); paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-linejoin: round; }
+    .map-towns { font-size: 13px; color: var(--muted); line-height: 1.8; margin-top: 18px; }
+    .map-towns strong { color: var(--ink); }
+    .map-note { font-size: 12px; color: #8A90A2; margin-top: 6px; }
+    .map-links { justify-content: center; margin-top: 24px; }
+    @media (max-width: 600px) {
+      .map-card { padding: 14px 10px 14px; border-radius: 18px; }
+      .ne-label { font-size: 30px; stroke-width: 7px; }
+      .map-stats { gap: 22px; }
+      .map-stats strong { font-size: 24px; }
+      .map-towns, .map-note { padding: 0 6px; }
+    }
