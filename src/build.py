@@ -166,7 +166,7 @@ FOOTER = f"""  <footer role="contentinfo">
         <div class="footer-col">
           <p class="footer-heading">Company</p>
           <ul>
-            <li><a href="/#about">Our Story</a></li>
+            <li><a href="/#areas">Where We Lend</a></li>
             <li><a href="/#values">Our Values</a></li>
             <li><a href="/#faq">FAQ</a></li>
             <li><a href="/#contact">Contact</a></li>
@@ -300,14 +300,12 @@ def lending_map_section():
     geo = json.loads(read("nebraska_paths.json"))
     data = json.loads(read("lending_map.json"))
     towns = sorted(data["towns"], key=lambda t: t["loans"])  # big dots drawn last
-    total = sum(t["loans"] for t in towns)
     def xy(t):
         return ((t["lon"] - geo["lon0"]) * geo["cos"] * geo["k"], (geo["lat0"] - t["lat"]) * geo["k"])
     dots, labels = [], []
     for t in towns:
         x, y = xy(t); r = 4 + 2.6 * math.sqrt(t["loans"])
-        n = f'{t["loans"]} loan' + ("" if t["loans"] == 1 else "s")
-        dots.append(f'<circle class="ne-dot" cx="{x:.1f}" cy="{y:.1f}" r="{r:.1f}"><title>{H.escape(t["name"])}: {n}</title></circle>')
+        dots.append(f'<circle class="ne-dot" cx="{x:.1f}" cy="{y:.1f}" r="{r:.1f}"><title>{H.escape(t["name"])}</title></circle>')
         if t.get("label"):
             left = t.get("label_left")
             lx = x - r - 6 if left else x + r + 6
@@ -317,7 +315,6 @@ def lending_map_section():
            f'<path class="ne-counties" d="{geo["counties"]}"/><path class="ne-state" d="{geo["state"]}"/>'
            + "".join(dots) + "".join(labels) + '</svg>')
     town_list = " · ".join(H.escape(t["name"]) for t in sorted(data["towns"], key=lambda t: (-t["loans"], t["name"])))
-    loans_display = f"{(total // 10) * 10}+" if total >= 20 else str(total)
     return f"""    <!-- LENDING MAP -->
     <section id="areas" aria-labelledby="areas-heading">
       <div class="container">
@@ -325,7 +322,6 @@ def lending_map_section():
         <h2 id="areas-heading" class="section-title center">Hard Money Loans Across Nebraska</h2>
         <p class="section-lead center" style="margin-left:auto;margin-right:auto;">Good Life Lending is a direct private lender based in Lincoln. Every dot below is a Nebraska town where we've funded a fix-and-flip, bridge or rental loan. The bigger the dot, the more deals we've done there.</p>
         <div class="map-stats">
-          <div><strong>{loans_display}</strong><span>Loans funded</span></div>
           <div><strong>{len(towns)}</strong><span>Nebraska communities</span></div>
           <div><strong>Omaha to Gering</strong><span>Statewide reach</span></div>
         </div>
