@@ -808,6 +808,13 @@
     .mt-24 { margin-top: 24px; }
 
     .footer-legal a { color: rgba(255,255,255,0.55); font-size: 12px; }
+    .footer-bottom .footer-disclosure {
+      flex-basis: 100%;
+      margin: 8px 0 0;
+      font-size: 13px;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.78);
+    }
     .footer-contact { font-size: 13px; line-height: 1.8; margin-top: 16px; }
     .footer-contact a { color: rgba(255,255,255,0.8); }
 
