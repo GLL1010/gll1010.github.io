@@ -99,7 +99,7 @@ LOAN_FORM_EMBED = """<iframe
 NAV = f"""  <nav aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="/" class="nav-logo">
-        <span style="color:var(--navy);font-weight:800;">Good</span><span style="color:var(--navy);font-weight:800;">life</span>&nbsp;<span style="color:var(--orange);font-size:13px;letter-spacing:2px;font-weight:600;">LENDING</span>
+        <img src="/assets/img/logo-header.png" alt="Good Life Lending" width="315" height="120" />
       </a>
       <ul class="nav-links" role="list">
         <li><a href="/#why-gll">Why GLL</a></li>
@@ -116,7 +116,7 @@ FOOTER = f"""  <footer role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand-name"><span style="color:#fff;font-weight:800;">Good</span><span style="color:#fff;font-weight:800;">life</span> <span style="color:var(--orange);font-size:13px;letter-spacing:2px;font-weight:600;">LENDING</span></div>
+          <div class="footer-brand-name"><img src="/assets/img/logo-white.png" alt="Good Life Lending" width="315" height="120" loading="lazy" /></div>
           <p class="footer-tagline">
             Helping real estate entrepreneurs experience opportunity through fast, character-based private financing.
           </p>

@@ -822,3 +822,36 @@
     .section-eyebrow { color: var(--orange-text); }
     .footer-legal a { text-decoration: underline; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    /* ===== LOGO + HERO PHOTO ===== */
+    nav { padding: 10px 0; }
+    .nav-logo img { height: 54px; width: auto; display: block; }
+    .footer-brand-name img { height: 64px; width: auto; display: block; margin-bottom: 4px; }
+
+    #hero { padding: 72px 0 72px; }
+    .hero-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 64px; align-items: center; }
+    #hero h1 { max-width: none; font-size: clamp(34px, 4.2vw, 52px); text-wrap: balance; }
+    .hero-accent { color: #E8994D; white-space: nowrap; }
+    .hero-stat-row { margin-top: 56px; }
+
+    .hero-photo { position: relative; margin: 0; max-width: 380px; justify-self: end; width: 100%; }
+    .hero-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 20px; display: block;
+      box-shadow: 0 24px 60px rgba(10, 16, 40, 0.45); border: 4px solid rgba(255, 255, 255, 0.14); }
+    .hero-badge { position: absolute; left: -32px; bottom: 28px; background: #fff; border-radius: 12px; padding: 14px 18px;
+      box-shadow: 0 12px 30px rgba(10, 16, 40, 0.3); border-left: 4px solid var(--orange); display: flex; flex-direction: column; gap: 2px; }
+    .hero-badge strong { color: var(--navy); font-size: 15px; line-height: 1.3; }
+    .hero-badge span { color: var(--muted); font-size: 12px; font-weight: 600; }
+    .hero-chip { position: absolute; top: 24px; right: -20px; background: #fff; color: var(--navy); font-size: 13px; font-weight: 700;
+      padding: 8px 14px; border-radius: 999px; box-shadow: 0 10px 24px rgba(10, 16, 40, 0.3); display: flex; align-items: center; gap: 8px; }
+    .hero-chip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-photo { justify-self: center; max-width: 320px; }
+      .hero-badge { left: -12px; }
+      .hero-chip { right: -8px; }
+    }
+    @media (max-width: 768px) {
+      .nav-logo img { height: 44px; }
+      #hero { padding: 48px 0 56px; }
+    }
