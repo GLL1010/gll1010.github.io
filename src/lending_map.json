@@ -7,7 +7,7 @@
     {"name": "Columbus", "lat": 41.4297, "lon": -97.3684, "loans": 5, "label": true},
     {"name": "Beatrice", "lat": 40.2681, "lon": -96.7470, "loans": 5, "label": true},
     {"name": "Norfolk", "lat": 42.0283, "lon": -97.4170, "loans": 4, "label": true},
-    {"name": "Nebraska City", "lat": 40.6767, "lon": -95.8592, "loans": 3, "label": true, "label_left": true},
+    {"name": "Nebraska City", "lat": 40.6767, "lon": -95.8592, "loans": 3},
     {"name": "Pleasant Dale", "lat": 40.7911, "lon": -96.9325, "loans": 3},
     {"name": "Elkhorn", "lat": 41.2864, "lon": -96.2364, "loans": 2},
     {"name": "Ord", "lat": 41.6033, "lon": -98.9262, "loans": 2, "label": true},
