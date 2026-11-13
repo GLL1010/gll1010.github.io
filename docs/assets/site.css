@@ -1012,3 +1012,20 @@
       .map-stats strong { font-size: 24px; }
       .map-towns, .map-note { padding: 0 6px; }
     }
+
+    /* ===== DARK HERO (homepage) ===== */
+    #hero { background: radial-gradient(1200px 600px at 85% 20%, #3E4E8A 0%, rgba(62, 78, 138, 0) 60%), linear-gradient(150deg, #161C3A 0%, #222B55 55%, #2C3868 100%); color: #fff; }
+    #hero::before { background: radial-gradient(circle, rgba(204, 119, 34, 0.12), rgba(204, 119, 34, 0) 70%); }
+    #hero .hero-eyebrow { color: #F0A55C; }
+    #hero h1 { color: #fff; }
+    #hero .hero-accent { color: #F0A55C; }
+    #hero .hero-sub { color: rgba(255, 255, 255, 0.82); }
+    #hero .btn-primary { background: var(--orange); box-shadow: 0 10px 24px rgba(204, 119, 34, 0.35); }
+    #hero .btn-primary:hover { background: #B8661A; }
+    #hero .btn-outline { color: #fff; border-color: rgba(255, 255, 255, 0.55); }
+    #hero .btn-outline:hover { background: rgba(255, 255, 255, 0.08); }
+    #hero .hero-dash { border-top-color: rgba(255, 255, 255, 0.3); }
+    #hero .hero-house { box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45); }
+    #hero .hero-stat-number { color: #fff; }
+    #hero .hero-stat-label { color: rgba(255, 255, 255, 0.7); }
+    #hero .hero-stat { border-left-color: var(--orange); }
