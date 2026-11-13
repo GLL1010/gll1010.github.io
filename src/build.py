@@ -206,6 +206,7 @@ FOOTER = f"""  <footer role="contentinfo">
         <p>
           Good Life Lending is a private lender. Loans are subject to credit approval, cash requirements, and deal quality review. This website does not constitute a commitment to lend. Terms and conditions apply.
         </p>
+        <p class="footer-disclosure">Good Life Lending LLC makes loans for business and investment purposes only. We do not make consumer loans or loans on owner-occupied homes.</p>
       </div>
     </div>
   </footer>"""
