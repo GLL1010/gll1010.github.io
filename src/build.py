@@ -92,6 +92,11 @@ DEFERRED_SURVEY = """<div class="survey-slot" data-survey style="min-height:520p
     s.src = 'https://link.msgsndr.com/js/form_embed.js';
     document.body.appendChild(s);
   }
+  if (location.hash === '#contact') load();
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href$="#contact"]');
+    if (a) load();
+  });
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       if (entries[0].isIntersecting) { load(); io.disconnect(); }
