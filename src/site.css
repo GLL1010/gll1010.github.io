@@ -958,3 +958,12 @@
       #why-gll .diff-card:nth-child(2) { transform: none; }
       #cta > .container { padding: 52px 22px; border-radius: 22px; }
     }
+
+    /* fixes */
+    .nav-mobile-cta { display: none !important; }
+    #why-gll .diff-grid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    @media (max-width: 1000px) { #why-gll .diff-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) {
+      .nav-mobile-cta { display: inline-flex !important; padding: 9px 16px; font-size: 13px; }
+      #why-gll .diff-grid { grid-template-columns: 1fr; }
+    }
