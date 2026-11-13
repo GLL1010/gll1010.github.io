@@ -121,9 +121,9 @@ FOOTER = f"""  <footer role="contentinfo">
             Helping real estate entrepreneurs experience opportunity through fast, character-based private financing.
           </p>
           <div class="footer-social" aria-label="Social media links">
-            <a href="https://www.instagram.com/good_life_lending" target="_blank" rel="noopener noreferrer" title="Instagram"><span aria-hidden="true">IG</span><span class="sr-only">Instagram</span></a>
-            <a href="https://www.facebook.com/goodlifelending" target="_blank" rel="noopener noreferrer" title="Facebook"><span aria-hidden="true">f</span><span class="sr-only">Facebook</span></a>
-            <a href="https://www.linkedin.com/company/goodlifelending" target="_blank" rel="noopener noreferrer" title="LinkedIn"><span aria-hidden="true">in</span><span class="sr-only">LinkedIn</span></a>
+            <a href="https://www.instagram.com/good_life_lending" target="_blank" rel="noopener noreferrer" title="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.7a5.1 5.1 0 1 0 0 10.2 5.1 5.1 0 0 0 0-10.2zm0 8.4a3.3 3.3 0 1 1 0-6.6 3.3 3.3 0 0 1 0 6.6zm5.3-9.8a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg><span class="sr-only">Instagram</span></a>
+            <a href="https://www.facebook.com/goodlifelending" target="_blank" rel="noopener noreferrer" title="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.5 21.9v-8.1h2.7l.4-3.2h-3.1V8.6c0-.9.3-1.5 1.6-1.5h1.7V4.2c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5v3.2h2.7v8.1h3.3z"/></svg><span class="sr-only">Facebook</span></a>
+            <a href="https://www.linkedin.com/company/goodlifelending" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3v-11zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.7 4.8 6.1v5.3h-4v-4.7c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5v4.8h-4v-11z"/></svg><span class="sr-only">LinkedIn</span></a>
           </div>
           <p class="footer-contact">
             <a href="tel:+14027707950">{PHONE}</a><br />
@@ -268,7 +268,7 @@ def build_home():
                 .replace("{{POF_URL}}", POF_URL)
                 .replace("{{SURVEY_EMBED}}", SURVEY_EMBED.replace("<iframe ", '<iframe loading="lazy" ', 1)))
     schema = json.loads(read("home-schema.json"))
-    faqs = re.findall(r'<div class="faq-item">\s*<h3>(.*?)</h3>\s*<p>(.*?)</p>', body, re.S)
+    faqs = re.findall(r'<details class="faq-item"><summary><h3>(.*?)</h3></summary><p>(.*?)</p></details>', body, re.S)
     for node in schema["@graph"]:
         if node["@type"] == "FinancialService":
             node["image"] = f"{DOMAIN}/assets/img/og-image.jpg"
@@ -304,7 +304,7 @@ def market_page(slug, place, seo):
     local_paras = "\n".join(f'          <p style="color:var(--muted);margin-bottom:16px;">{e(t)}</p>' for t in cc["paragraphs"])
     local_areas = "\n".join(f"            <li>{e(a)}</li>" for a in cc["areas"])
     local_fits = "\n".join(f"            <li>{e(f)}</li>" for f in cc["fits"])
-    local_faqs = "\n".join(f'          <div class="faq-item"><h3>{e(q)}</h3><p>{e(a)}</p></div>' for q, a in cc["faqs"])
+    local_faqs = "\n".join(f'          <details class="faq-item"><summary><h3>{e(q)}</h3></summary><p>{e(a)}</p></details>' for q, a in cc["faqs"])
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in cc["faqs"]]}
     """Content ported from the GHL market pages (same copy; city name swapped)."""
@@ -478,7 +478,7 @@ def market_page(slug, place, seo):
       <div class="container">
         <p class="section-eyebrow">Common Questions</p>
         <h2 class="section-title">{place} Hard Money Loan FAQs</h2>
-        <div class="faq-grid">
+        <div class="faq-list">
 {local_faqs}
         </div>
       </div>
