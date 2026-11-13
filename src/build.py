@@ -281,9 +281,9 @@ def build_home():
                                   for q, a in faqs]
     write("index.html", page(
         "", "Nebraska Hard Money Lender & Fix and Flip Loans | Good Life Lending",
-        "Good Life Lending is a direct hard money lender in Nebraska. Fast fix-and-flip, bridge and rental loans in Omaha, Lincoln and statewide — funded in 7–10 days.",
+        "Direct Nebraska hard money lender. Fix-and-flip, bridge and rental loans in Omaha, Lincoln and statewide, funded in as little as 5 days.",
         body, ld=schema, embeds=True,
-        og_title="Good Life Lending | Hard Money Loans That Close in 7–10 Days",
+        og_title="Good Life Lending | Hard Money Loans That Close in as Little as 5 Days",
         og_description="Fast, character-based hard money lending for Nebraska real estate investors. We've been on the borrower side — and we know how to say yes to the right deals."))
 
 

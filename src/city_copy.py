@@ -9,7 +9,7 @@ Plain text with "&" is fine here; build.py escapes it.
 
 CITY_COPY = {
     "hard-money-lenders-nebraska": {
-        "intro": "Nebraska real estate isn't one market. Omaha, Lincoln and the towns along I-80 each have their own prices, buyers and rehab realities. Good Life Lending is a Nebraska-based direct lender funding fix-and-flip and rental deals statewide, typically 7–10 days from approval to funding.",
+        "intro": "Nebraska real estate isn't one market. Omaha, Lincoln and the towns along I-80 each have their own prices, buyers and rehab realities. Good Life Lending is a Nebraska-based direct lender funding fix-and-flip and rental deals statewide, in as little as 5 days from approval to funding.",
         "heading": "Investing in Nebraska Real Estate",
         "paragraphs": [
             "I've been in real estate since 2008: my first flip with no playbook, my first rental in 2010. I got into lending because I'd been on the other side of the table, turned down by a bank when my income didn't look right on paper.",
@@ -26,11 +26,11 @@ CITY_COPY = {
         "faqs": [
             ("Do you lend everywhere in Nebraska?", "Yes. We fund deals across the state, from Omaha and Lincoln to Grand Island, Kearney, North Platte and Scottsbluff. We don't lend outside Nebraska right now."),
             ("What do I need to qualify?", "Decent credit, real cash in the deal and a solid opportunity. We look at the whole picture: who you are, what the deal looks like and whether the numbers make sense."),
-            ("How is a hard money loan different from a bank loan?", "Speed and flexibility. Banks often take 25–40+ days and decide mostly on paperwork. We typically fund in 7–10 days from approval and weigh the deal and the borrower together."),
+            ("How is a hard money loan different from a bank loan?", "Speed and flexibility. Banks often take 25–40+ days and decide mostly on paperwork. We can fund in as little as 5 days from approval and weigh the deal and the borrower together."),
         ],
     },
     "omaha-hard-money-lenders": {
-        "intro": "Omaha moves fast. Good houses in established neighborhoods don't sit long, and a seller who wants a quick close isn't going to wait 30-plus days on a bank. Good Life Lending funds Omaha fix-and-flip and rental deals in 7–10 days from approval, so your offer can compete.",
+        "intro": "Omaha moves fast. Good houses in established neighborhoods don't sit long, and a seller who wants a quick close isn't going to wait 30-plus days on a bank. Good Life Lending funds Omaha fix-and-flip and rental deals in as little as 5 days from approval, so your offer can compete.",
         "heading": "Investing in Omaha Real Estate",
         "paragraphs": [
             "Omaha is Nebraska's largest metro, and it's really several markets stacked together. A 1920s two-story in Benson or Dundee is a different project than a 1970s ranch in Millard or a starter home in Bellevue or Papillion. Rehab budgets, buyers and timelines change from one part of town to the next.",
@@ -47,7 +47,7 @@ CITY_COPY = {
         "faqs": [
             ("Do you lend in Council Bluffs or elsewhere in Iowa?", "Not right now. We fund deals in Nebraska only, so that's Omaha, Bellevue, Papillion, La Vista and the rest of the metro on the Nebraska side of the river."),
             ("Can you fund an Omaha flip that needs a big rehab?", "Yes, as long as the numbers work. We finance the purchase and the renovation and fund rehab draws as the work gets done. What matters is the after-repair value, your budget and your plan."),
-            ("How fast can you close in Omaha?", "Typically 7–10 days from approval to funding. Title and appraisal timing can move that a little, but we work hard not to be the holdup."),
+            ("How fast can you close in Omaha?", "As little as 5 days from approval to funding. Title and appraisal timing can move that a little, but we work hard not to be the holdup."),
         ],
     },
     "lincoln-hard-money-lenders": {
@@ -72,7 +72,7 @@ CITY_COPY = {
         ],
     },
     "grand-island-hard-money-lenders": {
-        "intro": "Grand Island investors shouldn't have to wait on a big-city lender who doesn't know central Nebraska. Good Life Lending funds fix-and-flip and rental deals in Grand Island and the towns around it, typically 7–10 days from approval to funding.",
+        "intro": "Grand Island investors shouldn't have to wait on a big-city lender who doesn't know central Nebraska. Good Life Lending funds fix-and-flip and rental deals in Grand Island and the towns around it, in as little as 5 days from approval to funding.",
         "heading": "Investing in Grand Island Real Estate",
         "paragraphs": [
             "Grand Island is the hub of central Nebraska. It's home to the Nebraska State Fair and a big regional workforce, and that keeps demand steady for decent, affordable rentals.",
@@ -93,7 +93,7 @@ CITY_COPY = {
         ],
     },
     "kearney-hard-money-lenders": {
-        "intro": "Kearney sits right on I-80 with the University of Nebraska at Kearney in town, and that combination keeps housing in demand. Good Life Lending funds fix-and-flip and rental deals in Kearney and across Buffalo County, typically 7–10 days from approval to funding.",
+        "intro": "Kearney sits right on I-80 with the University of Nebraska at Kearney in town, and that combination keeps housing in demand. Good Life Lending funds fix-and-flip and rental deals in Kearney and across Buffalo County, in as little as 5 days from approval to funding.",
         "heading": "Investing in Kearney Real Estate",
         "paragraphs": [
             "UNK, healthcare and a regional retail and service economy give Kearney a steady base of renters and buyers. For investors, rentals near campus and well-located starter homes can both work, as long as the numbers do.",
