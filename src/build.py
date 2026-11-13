@@ -17,7 +17,9 @@ POF_URL = "https://portal.goodlife-lending.com/goodlifelending/proof-of-funds"
 PORTAL_URL = "https://portal.goodlife-lending.com"
 PHONE = "402-770-7950"
 EMAIL = "josh@goodlife-lending.com"
-LASTMOD = "2026-11-12"  # bump when content changes
+LASTMOD = "2026-11-12"
+import hashlib
+CSS_VERSION = hashlib.md5(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "site.css"), "rb").read()).hexdigest()[:8]  # cache-buster  # bump when content changes
 
 # ---------------------------------------------------------------------------
 # Tracking: copied verbatim from GHL > GLL Basic Site > Settings > Tracking code
@@ -214,7 +216,7 @@ def page(path, title, description, body, *, canonical=None, extra_head="", ld=No
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/site.css" />
+  <link rel="stylesheet" href="/assets/site.css?v={CSS_VERSION}" />
 </head>
 
 <body>
